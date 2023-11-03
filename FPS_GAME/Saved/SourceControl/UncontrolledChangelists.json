@@ -1,0 +1,24 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_GAME/FPS_GAME/Content/Images/UI/T_HealthUI1.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_GAME/FPS_GAME/Content/Widgets/WB_PlayerHealth.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_GAME/FPS_GAME/Content/Levels/L_Fps.umap",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/Assesment/FPS_GAME/Content/Levels/L_Fps.umap",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/Assesment/FPS_GAME/Content/Blueprints/BP_FpsGameMode.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/Assesment/FPS_GAME/Content/Character/Input/AI_Look.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/Assesment/FPS_GAME/Content/Character/Input/AI_Move.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/Assesment/FPS_GAME/Content/Character/Input/IMC_CharacterMapping.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/Assesment/FPS_GAME/Content/Character/BP_MainCharacter.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/Assesment/FPS_GAME/Content/Character/Input/AI_Jump.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/Assesment/FPS_GAME/Content/Character/Input/AI_HighJump.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/Assesment/FPS_GAME/Content/Images/UI/T_HealthUI1.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/Assesment/FPS_GAME/Content/Widgets/WB_PlayerHealth.uasset"
+			]
+		}
+	]
+}

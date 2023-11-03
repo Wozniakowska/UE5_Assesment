@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "FPS_GAME",
+			"Path": "C:\\Users\\natal\\Documents\\University\\Advanced Game Engine\\Assesment\\FPS_GAME\\Source\\FPS_GAME.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "FPS_GAMEEditor",
+			"Path": "C:\\Users\\natal\\Documents\\University\\Advanced Game Engine\\Assesment\\FPS_GAME\\Source\\FPS_GAMEEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
