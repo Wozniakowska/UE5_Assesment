@@ -1,12 +1,12 @@
 {
     "Version": "1.1",
     "Data": {
-        "Source": "c:\\users\\natal\\documents\\university\\advanced game engine\\assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\maincharacter.gen.cpp",
+        "Source": "c:\\users\\mcgam\\documents\\group\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\maincharacter.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\natal\\documents\\university\\advanced game engine\\assesment\\fps_game\\intermediate\\build\\win64\\x64\\fps_gameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "PCH": "c:\\users\\mcgam\\documents\\group\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\fps_gameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
-            "c:\\users\\natal\\documents\\university\\advanced game engine\\assesment\\fps_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fps_game\\definitions.fps_game.h",
-            "c:\\users\\natal\\documents\\university\\advanced game engine\\assesment\\fps_game\\source\\fps_game\\public\\maincharacter.h",
+            "c:\\users\\mcgam\\documents\\group\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fps_game\\definitions.fps_game.h",
+            "c:\\users\\mcgam\\documents\\group\\ue5_assesment\\fps_game\\source\\fps_game\\public\\maincharacter.h",
             "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
             "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
@@ -39,7 +39,7 @@
             "c:\\program files\\epic games\\ue_5.2\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputsubsystems.generated.h",
             "c:\\program files\\epic games\\ue_5.2\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedinputworldprocessor.h",
             "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\slate\\public\\framework\\application\\iinputprocessor.h",
-            "c:\\users\\natal\\documents\\university\\advanced game engine\\assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\maincharacter.generated.h"
+            "c:\\users\\mcgam\\documents\\group\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\maincharacter.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

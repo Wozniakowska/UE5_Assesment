@@ -1,12 +1,12 @@
 {
     "Version": "1.1",
     "Data": {
-        "Source": "c:\\users\\natal\\documents\\university\\advanced game engine\\assesment\\fps_game\\source\\fps_game\\fps_game.cpp",
+        "Source": "c:\\users\\mcgam\\documents\\group\\ue5_assesment\\fps_game\\source\\fps_game\\fps_game.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\natal\\documents\\university\\advanced game engine\\assesment\\fps_game\\intermediate\\build\\win64\\x64\\fps_gameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "PCH": "c:\\users\\mcgam\\documents\\group\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\fps_gameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
-            "c:\\users\\natal\\documents\\university\\advanced game engine\\assesment\\fps_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fps_game\\definitions.fps_game.h",
-            "c:\\users\\natal\\documents\\university\\advanced game engine\\assesment\\fps_game\\source\\fps_game\\fps_game.h"
+            "c:\\users\\mcgam\\documents\\group\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fps_game\\definitions.fps_game.h",
+            "c:\\users\\mcgam\\documents\\group\\ue5_assesment\\fps_game\\source\\fps_game\\fps_game.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
