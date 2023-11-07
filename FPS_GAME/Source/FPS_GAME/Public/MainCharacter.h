@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Camera/CameraComponent.h" 
+#include "Components/CapsuleComponent.h"
 #include "InputActionValue.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
@@ -83,4 +85,14 @@ public:
 	void Look(const FInputActionValue& Value);
 
 	void Jumping();
+
+	// Camera component
+	UPROPERTY(VisibleAnywhere, Category = "Camera")
+		UCameraComponent* FPSCamera;
+
+	// First-person mesh (arms), visible only to the owning player.
+	UPROPERTY(VisibleDefaultsOnly, Category = "MeshArms")
+		USkeletalMeshComponent* FPSMeshArms;
+
+
 };

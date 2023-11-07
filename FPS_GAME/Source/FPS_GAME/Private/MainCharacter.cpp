@@ -4,14 +4,22 @@
 #include "MainCharacter.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
-#include "GameFramework/PlayerController.h"
+#include "GameFramework/PlayerController.h" 
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 
 // Sets default values
 AMainCharacter::AMainCharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	FPSCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
+	FPSCamera->SetupAttachment(CastChecked<USceneComponent, UCapsuleComponent>(GetCapsuleComponent()));
+	FPSCamera->SetRelativeLocation(FVector(0.0f, 0.0f, 60.0f + BaseEyeHeight));
+	FPSCamera->bUsePawnControlRotation = true;
+
+	FPSMeshArms = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonMeshArms"));
+	check(FPSMeshArms != nullptr);
+	FPSMeshArms->SetupAttachment(FPSCamera);
+
 	PrimaryActorTick.bCanEverTick = true;
 	JumpHeight = 1000.0f;
 	bIsJumping = false;
@@ -38,6 +46,17 @@ void AMainCharacter::BeginPlay()
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
 	}
+	if (FPSMeshArms != nullptr)
+	{
+		FPSMeshArms->bCastDynamicShadow = false;
+
+		FPSMeshArms->CastShadow = false;
+
+		FPSMeshArms->SetOnlyOwnerSee(true);
+	}
+
+	GetMesh()->SetOwnerNoSee(true);
+
 }
 
 
