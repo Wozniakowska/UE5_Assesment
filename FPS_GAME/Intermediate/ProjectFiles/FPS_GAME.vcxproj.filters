@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="..\..\FPS_GAME.uproject" />
     <Filter Include="Source">
@@ -12,6 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\gitignore" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -26,6 +27,18 @@
     </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
+    </None>
+    <Filter Include="Platforms">
+      <UniqueIdentifier>{ED49A36C-4FD5-37E5-A2AC-E11BEF4F21CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platforms\HoloLens">
+      <UniqueIdentifier>{28125F47-4973-377C-9D77-EBC3C72EC856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platforms\HoloLens\Config">
+      <UniqueIdentifier>{D3BF39CB-FA64-39E2-A327-B5021BA69773}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Platforms\HoloLens\Config\HoloLensEngine.ini">
+      <Filter>Platforms\HoloLens\Config</Filter>
     </None>
     <Filter Include="Source\FPS_GAME">
       <UniqueIdentifier>{EC1AF617-4BC0-32A3-A809-327575504FBC}</UniqueIdentifier>
@@ -51,10 +64,16 @@
     <ClCompile Include="..\..\Source\FPS_GAME\Private\MainCharacter.cpp">
       <Filter>Source\FPS_GAME\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS_GAME\Private\Timer.cpp">
+      <Filter>Source\FPS_GAME\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\FPS_GAME\Public">
       <UniqueIdentifier>{ABD77FA7-D1E9-3361-B80C-9735654B9652}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\FPS_GAME\Public\MainCharacter.h">
+      <Filter>Source\FPS_GAME\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPS_GAME\Public\Timer.h">
       <Filter>Source\FPS_GAME\Public</Filter>
     </ClInclude>
   </ItemGroup>

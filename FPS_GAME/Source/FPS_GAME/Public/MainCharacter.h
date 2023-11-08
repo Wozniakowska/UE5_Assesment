@@ -74,6 +74,7 @@ public:
 
 	bool bIsJumping;
 	float JumpHeight;
+	int Seconds;
 
 	//Take damage function
 	void TakeDamage(float DamageAmount);
