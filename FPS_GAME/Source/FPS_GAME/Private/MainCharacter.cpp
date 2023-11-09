@@ -1,3 +1,4 @@
+
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
@@ -35,6 +36,8 @@ void AMainCharacter::BeginPlay()
 	Super::BeginPlay();
 	
 	SpawnLocation = GetActorLocation();
+
+	GetWorldTimerManager().SetTimer(CountdownTimerHandle, this, &AMainCharacter::CountdownTimer, 1.0f, true, 1.0f);
 
 	//Add Input Mapping Context
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
@@ -137,9 +140,31 @@ void AMainCharacter::Jumping()
 	bIsJumping = true;
 }
 
+void AMainCharacter::CountdownTimer()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Countdown Timer"));
+	if (Seconds > 0)
+	{
+		--Seconds;
+		UE_LOG(LogTemp, Warning, TEXT("Seconds %f"), Seconds);
+	}
+	else
+	{
+		--Minutes;
+		Seconds = 59.0f;
+		UE_LOG(LogTemp, Warning, TEXT("Seconds %f"), Minutes);
+		if (Minutes <= 0)
+		{
+			GetWorldTimerManager().ClearTimer(CountdownTimerHandle);
+			Seconds = 0.0f;
+		}
+	}
+	
+}
+
 void AMainCharacter::TakeDamage(float DamageAmount)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Damage taken.!"), DamageAmount);
+	UE_LOG(LogTemp, Warning, TEXT("Damage taken!"), DamageAmount);
 	PlayerHealth -= DamageAmount;
 	if (PlayerHealth < 0.00f)
 	{

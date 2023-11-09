@@ -5,7 +5,6 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"F:/_Work/University/Year 3/UE5_Assesment/FPS_GAME/Content/Levels/L_Fps.umap",
 				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Character/BP_MainCharacter.uasset",
 				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Character/Models/Capoeira.uasset",
 				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Character/Models/Ch32_body.uasset",
@@ -445,6 +444,10 @@
 				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Models/Collecitibles/SK_Heart_Skeleton.uasset",
 				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Blueprints/BP_StaticPlatforms.uasset",
 				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Widgets/WB_Timer.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Images/UI/Timer.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Models/Platforms/Materials/M_PLATFORM.uasset",
+				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Blueprints/BP_StaticPlatform.uasset",
+				"F:/_Work/University/Year 3/UE5_Assesment/FPS_GAME/Content/Levels/L_Fps.umap",
 				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Blueprints/Enviroment/Rocks/BP_RocksV4.uasset",
 				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Blueprints/Enviroment/Rocks/BP_RocksV3.uasset",
 				"C:/Users/natal/Documents/University/Advanced Game Engine/UE5_Assesment/FPS_GAME/Content/Blueprints/Enviroment/Rocks/BP_RocksV2.uasset",

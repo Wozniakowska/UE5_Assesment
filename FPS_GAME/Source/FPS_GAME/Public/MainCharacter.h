@@ -41,6 +41,18 @@ protected:
 		bool isDead;
 	/*************************************************************/
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
+	float Seconds = 59.0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
+	int32 Minutes = 2.0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
+	FTimerHandle CountdownTimerHandle;
+
+	// Format the timer as "MM:SS"
+	UFUNCTION(BlueprintImplementableEvent, Category = "UI")
+	void UpdateTimerUI(const FString& TimerText);
 
 public:	
 	// Called every frame
@@ -74,7 +86,7 @@ public:
 
 	bool bIsJumping;
 	float JumpHeight;
-	int Seconds;
+
 
 	//Take damage function
 	void TakeDamage(float DamageAmount);
@@ -87,13 +99,16 @@ public:
 
 	void Jumping();
 
+	void CountdownTimer();
+
 	// Camera component
 	UPROPERTY(VisibleAnywhere, Category = "Camera")
-		UCameraComponent* FPSCamera;
+	UCameraComponent* FPSCamera;
 
 	// First-person mesh (arms), visible only to the owning player.
 	UPROPERTY(VisibleDefaultsOnly, Category = "MeshArms")
-		USkeletalMeshComponent* FPSMeshArms;
+	USkeletalMeshComponent* FPSMeshArms;
+
 
 
 };
