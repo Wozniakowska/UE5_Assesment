@@ -1,7 +1,6 @@
 
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "MainCharacter.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
@@ -12,6 +11,8 @@
 // Sets default values
 AMainCharacter::AMainCharacter()
 {
+
+	PrimaryActorTick.bCanEverTick = true;
 	FPSCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FPSCamera->SetupAttachment(CastChecked<USceneComponent, UCapsuleComponent>(GetCapsuleComponent()));
 	FPSCamera->SetRelativeLocation(FVector(0.0f, 0.0f, 60.0f + BaseEyeHeight));
@@ -20,14 +21,13 @@ AMainCharacter::AMainCharacter()
 	FPSMeshArms = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonMeshArms"));
 	check(FPSMeshArms != nullptr);
 	FPSMeshArms->SetupAttachment(FPSCamera);
-
-	PrimaryActorTick.bCanEverTick = true;
 	JumpHeight = 1000.0f;
 	bIsJumping = false;
 	PlayerHealth = 1.00f;
 	RespawnDelay = 0.01f;
 	SpawnLocation = FVector(0.0f, 0.0f, 0.0f);
 	isDead = false;
+
 }
 
 // Called when the game starts or when spawned
@@ -57,12 +57,8 @@ void AMainCharacter::BeginPlay()
 
 		FPSMeshArms->SetOnlyOwnerSee(true);
 	}
-
 	GetMesh()->SetOwnerNoSee(true);
-
 }
-
-
 
 // Called every frame
 void AMainCharacter::Tick(float DeltaTime)
@@ -73,7 +69,6 @@ void AMainCharacter::Tick(float DeltaTime)
 		// Apply a higher jump while the space bar is held down
 		GetCharacterMovement()->Velocity.Z = JumpHeight;
 	}
-
 }
 
 // Called to bind functionality to input
@@ -159,12 +154,11 @@ void AMainCharacter::CountdownTimer()
 			Seconds = 0.0f;
 		}
 	}
-	
 }
 
 void AMainCharacter::TakeDamage(float DamageAmount)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Damage taken!"), DamageAmount);
+	UE_LOG(LogTemp, Warning, TEXT("Damage taken"), DamageAmount);
 	PlayerHealth -= DamageAmount;
 	if (PlayerHealth < 0.00f)
 	{
@@ -176,7 +170,6 @@ void AMainCharacter::TakeDamage(float DamageAmount)
 void AMainCharacter::StartDamage()
 {
 	TakeDamage(0.2f);
-
 }
 
 void AMainCharacter::Heal(float HealAmount)
@@ -200,7 +193,6 @@ void AMainCharacter::Respawn()
 	SetActorLocation(SpawnLocation);
 	isDead = false;
 	PlayerHealth = 1.0f;
-
 }
 
 void AMainCharacter::Die()

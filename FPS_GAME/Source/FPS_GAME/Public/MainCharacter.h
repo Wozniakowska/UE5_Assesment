@@ -50,10 +50,6 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
 	FTimerHandle CountdownTimerHandle;
 
-	// Format the timer as "MM:SS"
-	UFUNCTION(BlueprintImplementableEvent, Category = "UI")
-	void UpdateTimerUI(const FString& TimerText);
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -87,7 +83,6 @@ public:
 	bool bIsJumping;
 	float JumpHeight;
 
-
 	//Take damage function
 	void TakeDamage(float DamageAmount);
 	//Start damage - assign the damage number
@@ -108,7 +103,5 @@ public:
 	// First-person mesh (arms), visible only to the owning player.
 	UPROPERTY(VisibleDefaultsOnly, Category = "MeshArms")
 	USkeletalMeshComponent* FPSMeshArms;
-
-
 
 };

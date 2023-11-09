@@ -21,58 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	FPS_GAME_API UClass* Z_Construct_UClass_AMainCharacter_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_FPS_GAME();
 // End Cross Module References
-	struct MainCharacter_eventUpdateTimerUI_Parms
-	{
-		FString TimerText;
-	};
-	static FName NAME_AMainCharacter_UpdateTimerUI = FName(TEXT("UpdateTimerUI"));
-	void AMainCharacter::UpdateTimerUI(const FString& TimerText)
-	{
-		MainCharacter_eventUpdateTimerUI_Parms Parms;
-		Parms.TimerText=TimerText;
-		ProcessEvent(FindFunctionChecked(NAME_AMainCharacter_UpdateTimerUI),&Parms);
-	}
 	void AMainCharacter::StaticRegisterNativesAMainCharacter()
 	{
-	}
-	struct Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_TimerText_MetaData[];
-#endif
-		static const UECodeGen_Private::FStrPropertyParams NewProp_TimerText;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::NewProp_TimerText_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::NewProp_TimerText = { "TimerText", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MainCharacter_eventUpdateTimerUI_Parms, TimerText), METADATA_PARAMS(Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::NewProp_TimerText_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::NewProp_TimerText_MetaData)) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::NewProp_TimerText,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::Function_MetaDataParams[] = {
-		{ "Category", "UI" },
-		{ "Comment", "// Format the timer as \"MM:SS\"\n" },
-		{ "ModuleRelativePath", "Public/MainCharacter.h" },
-		{ "ToolTip", "Format the timer as \"MM:SS\"" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMainCharacter, nullptr, "UpdateTimerUI", nullptr, nullptr, sizeof(MainCharacter_eventUpdateTimerUI_Parms), Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMainCharacter_UpdateTimerUI()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMainCharacter_UpdateTimerUI_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AMainCharacter);
 	UClass* Z_Construct_UClass_AMainCharacter_NoRegister()
@@ -82,7 +32,6 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	struct Z_Construct_UClass_AMainCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
-		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -154,9 +103,6 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	UObject* (*const Z_Construct_UClass_AMainCharacter_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_FPS_GAME,
-	};
-	const FClassFunctionLinkInfo Z_Construct_UClass_AMainCharacter_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMainCharacter_UpdateTimerUI, "UpdateTimerUI" }, // 3797718626
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::Class_MetaDataParams[] = {
@@ -316,11 +262,11 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		FuncInfo,
+		nullptr,
 		Z_Construct_UClass_AMainCharacter_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		UE_ARRAY_COUNT(FuncInfo),
+		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -345,9 +291,9 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 3576772789U) },
+		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 1246669462U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_4256424605(TEXT("/Script/FPS_GAME"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_996289195(TEXT("/Script/FPS_GAME"),
 		Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
