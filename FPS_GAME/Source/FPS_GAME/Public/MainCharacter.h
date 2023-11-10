@@ -103,5 +103,7 @@ public:
 	// First-person mesh (arms), visible only to the owning player.
 	UPROPERTY(VisibleDefaultsOnly, Category = "MeshArms")
 	USkeletalMeshComponent* FPSMeshArms;
+	UFUNCTION(BlueprintCallable)
+	void SetRespawnLocation(const FVector& NewRespawnLocation);
 
 };

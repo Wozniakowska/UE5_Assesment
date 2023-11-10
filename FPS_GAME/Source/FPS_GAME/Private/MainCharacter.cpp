@@ -4,6 +4,7 @@
 #include "MainCharacter.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "Components/BoxComponent.h"
 #include "GameFramework/PlayerController.h" 
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -11,23 +12,19 @@
 // Sets default values
 AMainCharacter::AMainCharacter()
 {
-
 	PrimaryActorTick.bCanEverTick = true;
 	FPSCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FPSCamera->SetupAttachment(CastChecked<USceneComponent, UCapsuleComponent>(GetCapsuleComponent()));
 	FPSCamera->SetRelativeLocation(FVector(0.0f, 0.0f, 60.0f + BaseEyeHeight));
 	FPSCamera->bUsePawnControlRotation = true;
-
 	FPSMeshArms = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonMeshArms"));
 	check(FPSMeshArms != nullptr);
 	FPSMeshArms->SetupAttachment(FPSCamera);
 	JumpHeight = 1000.0f;
-	bIsJumping = false;
 	PlayerHealth = 1.00f;
 	RespawnDelay = 0.01f;
-	SpawnLocation = FVector(0.0f, 0.0f, 0.0f);
+	/*SpawnLocation = FVector(0.0f, 0.0f, 0.0f);*/
 	isDead = false;
-
 }
 
 // Called when the game starts or when spawned
@@ -35,7 +32,7 @@ void AMainCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	SpawnLocation = GetActorLocation();
+	/*SpawnLocation = GetActorLocation();*/
 
 	GetWorldTimerManager().SetTimer(CountdownTimerHandle, this, &AMainCharacter::CountdownTimer, 1.0f, true, 1.0f);
 
@@ -154,6 +151,11 @@ void AMainCharacter::CountdownTimer()
 			Seconds = 0.0f;
 		}
 	}
+}
+
+void AMainCharacter::SetRespawnLocation(const FVector& NewRespawnLocation)
+{
+	SpawnLocation = NewRespawnLocation;
 }
 
 void AMainCharacter::TakeDamage(float DamageAmount)

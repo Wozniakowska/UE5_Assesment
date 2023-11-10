@@ -2,6 +2,7 @@
   Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" FPS_GAMEEditor Win64 Development -Project="C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\FPS_GAME.uproject" -WaitMutex -FromMsBuild
   Log file: C:\Users\natal\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment).
+  Invalidating makefile for FPS_GAMEEditor (CheckPoints.cpp.obj.response modified)
   Building FPS_GAMEEditor...
   Using Visual Studio 2022 14.37.32825 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   [Upgrade]
@@ -10,20 +11,25 @@
   [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_2;' in FPS_GAMEEditor.Target.cs.
   [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
   [Upgrade]
-  [Adaptive Build] Excluded from FPS_GAME unity file: MainCharacter.cpp
+  [Adaptive Build] Excluded from FPS_GAME unity file: Checkpoint.cpp, CheckPoints.cpp, MainCharacter.cpp
   Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
     Executing up to 8 processes, one per physical core
-    Requested 1.5 GB free memory per action, 11.93 GB available: limiting max parallel actions to 7
-  Building 4 actions with 4 processes...
-  [1/4] Compile [x64] MainCharacter.cpp
+    Requested 1.5 GB free memory per action, 10.68 GB available: limiting max parallel actions to 7
+  Building 5 actions with 5 processes...
+  [1/5] Compile [x64] CheckPoints.cpp
 C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(87): warning C4263: 'void AMainCharacter::TakeDamage(float)': member function does not override any base class virtual member function
-C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(107): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(109): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
   C:\Program Files\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\Pawn.h(278): note: see declaration of 'APawn::TakeDamage'
   C:\Program Files\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\PlayerController.h(40): note: see declaration of 'APawn'
-  [2/4] Link [x64] UnrealEditor-FPS_GAME-0007.lib
-     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0007.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0007.exp
-  [3/4] Link [x64] UnrealEditor-FPS_GAME-0007.dll
-     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0007.suppressed.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0007.suppressed.exp
-  [4/4] WriteMetadata FPS_GAMEEditor.target
-  Total time in Parallel executor: 4.15 seconds
-  Total execution time: 5.58 seconds
+  [2/5] Compile [x64] MainCharacter.cpp
+C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(87): warning C4263: 'void AMainCharacter::TakeDamage(float)': member function does not override any base class virtual member function
+C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(109): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+  C:\Program Files\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\Pawn.h(278): note: see declaration of 'APawn::TakeDamage'
+  C:\Program Files\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\PlayerController.h(40): note: see declaration of 'APawn'
+  [3/5] Link [x64] UnrealEditor-FPS_GAME-0044.lib
+     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0044.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0044.exp
+  [4/5] Link [x64] UnrealEditor-FPS_GAME-0044.dll
+     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0044.suppressed.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0044.suppressed.exp
+  [5/5] WriteMetadata FPS_GAMEEditor.target
+  Total time in Parallel executor: 3.68 seconds
+  Total execution time: 6.12 seconds

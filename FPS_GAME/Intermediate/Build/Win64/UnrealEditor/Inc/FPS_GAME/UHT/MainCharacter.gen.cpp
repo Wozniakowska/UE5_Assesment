@@ -21,8 +21,61 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	FPS_GAME_API UClass* Z_Construct_UClass_AMainCharacter_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_FPS_GAME();
 // End Cross Module References
+	DEFINE_FUNCTION(AMainCharacter::execSetRespawnLocation)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_NewRespawnLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetRespawnLocation(Z_Param_Out_NewRespawnLocation);
+		P_NATIVE_END;
+	}
 	void AMainCharacter::StaticRegisterNativesAMainCharacter()
 	{
+		UClass* Class = AMainCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "SetRespawnLocation", &AMainCharacter::execSetRespawnLocation },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics
+	{
+		struct MainCharacter_eventSetRespawnLocation_Parms
+		{
+			FVector NewRespawnLocation;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_NewRespawnLocation_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_NewRespawnLocation;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::NewProp_NewRespawnLocation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::NewProp_NewRespawnLocation = { "NewRespawnLocation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MainCharacter_eventSetRespawnLocation_Parms, NewRespawnLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::NewProp_NewRespawnLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::NewProp_NewRespawnLocation_MetaData)) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::NewProp_NewRespawnLocation,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/MainCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMainCharacter, nullptr, "SetRespawnLocation", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::MainCharacter_eventSetRespawnLocation_Parms), Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04C20401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMainCharacter_SetRespawnLocation()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AMainCharacter);
 	UClass* Z_Construct_UClass_AMainCharacter_NoRegister()
@@ -32,6 +85,7 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	struct Z_Construct_UClass_AMainCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -103,6 +157,9 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	UObject* (*const Z_Construct_UClass_AMainCharacter_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_FPS_GAME,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AMainCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AMainCharacter_SetRespawnLocation, "SetRespawnLocation" }, // 3948360475
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::Class_MetaDataParams[] = {
@@ -262,11 +319,11 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AMainCharacter_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -291,9 +348,9 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 1246669462U) },
+		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 3667234231U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_996289195(TEXT("/Script/FPS_GAME"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_4089245833(TEXT("/Script/FPS_GAME"),
 		Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

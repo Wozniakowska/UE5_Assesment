@@ -61,6 +61,12 @@
     <Filter Include="Source\FPS_GAME\Private">
       <UniqueIdentifier>{5F1AFDB4-0D65-3631-B811-59ED4233C18C}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\FPS_GAME\Private\Checkpoint.cpp">
+      <Filter>Source\FPS_GAME\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPS_GAME\Private\CheckPoints.cpp">
+      <Filter>Source\FPS_GAME\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS_GAME\Private\MainCharacter.cpp">
       <Filter>Source\FPS_GAME\Private</Filter>
     </ClCompile>
@@ -70,6 +76,12 @@
     <Filter Include="Source\FPS_GAME\Public">
       <UniqueIdentifier>{ABD77FA7-D1E9-3361-B80C-9735654B9652}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\FPS_GAME\Public\Checkpoint.h">
+      <Filter>Source\FPS_GAME\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPS_GAME\Public\CheckPoints.h">
+      <Filter>Source\FPS_GAME\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\FPS_GAME\Public\MainCharacter.h">
       <Filter>Source\FPS_GAME\Public</Filter>
     </ClInclude>
