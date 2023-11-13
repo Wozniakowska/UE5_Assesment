@@ -37,8 +37,6 @@ protected:
 		FVector SpawnLocation;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 		float RespawnDelay;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
-		bool isDead;
 	/*************************************************************/
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
@@ -106,5 +104,7 @@ public:
 	USkeletalMeshComponent* FPSMeshArms;
 	UFUNCTION(BlueprintCallable)
 	void SetRespawnLocation(const FVector& NewRespawnLocation);
-
+	//Take damage function
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	bool isDead;
 };

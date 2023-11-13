@@ -11,9 +11,9 @@ ALava::ALava()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
-	BoxComponent->SetBoxExtent(FVector(2500.f, 350.f, 200.f)); // Set the size of the trigger box
+	//BoxComponent->SetBoxExtent(FVector(2500.f, 350.f, 200.f)); // Set the size of the trigger box
     /*BoxComponent->SetRelativeScale3D(FVector(3.0f, 3.0f, 16.0f));*/
-	BoxComponent->OnComponentBeginOverlap.AddDynamic(this, &ALava::OverlapBegin);
+	/*BoxComponent->OnComponentBeginOverlap.AddDynamic(this, &ALava::OverlapBegin);*/
 	RootComponent = BoxComponent;
 }
 

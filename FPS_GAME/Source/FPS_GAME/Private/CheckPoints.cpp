@@ -34,7 +34,7 @@ void ACheckPoints::OnBeingOverlap(UPrimitiveComponent* OverlappedComp, AActor* O
 {
 	if (AMainCharacter* MainCharacter = Cast<AMainCharacter>(OtherActor))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Collision Detected"));
+		UE_LOG(LogTemp, Warning, TEXT("Collision Detected."));
 		MainCharacter->SetRespawnLocation(GetActorLocation());
 	}
 }

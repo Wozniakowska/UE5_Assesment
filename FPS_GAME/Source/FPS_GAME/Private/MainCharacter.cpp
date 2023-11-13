@@ -66,6 +66,11 @@ void AMainCharacter::Tick(float DeltaTime)
 		// Apply a higher jump while the space bar is held down
 		GetCharacterMovement()->Velocity.Z = JumpHeight;
 	}
+	if (PlayerHealth < 0.00f)
+	{
+		PlayerHealth = 0.00f;
+		Die();
+	}
 }
 
 // Called to bind functionality to input
@@ -162,11 +167,7 @@ void AMainCharacter::TakeDamage(float DamageAmount)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Damage taken"), DamageAmount);
 	PlayerHealth -= DamageAmount;
-	if (PlayerHealth < 0.00f)
-	{
-		PlayerHealth = 0.00f;
-		Die();
-	}
+	
 }
 
 void AMainCharacter::StartDamage()
