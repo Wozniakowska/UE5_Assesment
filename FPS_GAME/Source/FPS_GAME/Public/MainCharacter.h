@@ -84,6 +84,7 @@ public:
 	float JumpHeight;
 
 	//Take damage function
+	UFUNCTION(BlueprintCallable, Category = "CustomEventDamage")
 	void TakeDamage(float DamageAmount);
 	//Start damage - assign the damage number
 	void StartDamage();

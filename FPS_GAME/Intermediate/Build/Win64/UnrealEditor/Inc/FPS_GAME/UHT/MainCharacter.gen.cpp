@@ -29,11 +29,20 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		P_THIS->SetRespawnLocation(Z_Param_Out_NewRespawnLocation);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AMainCharacter::execTakeDamage)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_DamageAmount);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TakeDamage(Z_Param_DamageAmount);
+		P_NATIVE_END;
+	}
 	void AMainCharacter::StaticRegisterNativesAMainCharacter()
 	{
 		UClass* Class = AMainCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "SetRespawnLocation", &AMainCharacter::execSetRespawnLocation },
+			{ "TakeDamage", &AMainCharacter::execTakeDamage },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -74,6 +83,41 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMainCharacter_SetRespawnLocation_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics
+	{
+		struct MainCharacter_eventTakeDamage_Parms
+		{
+			float DamageAmount;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageAmount;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::NewProp_DamageAmount = { "DamageAmount", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MainCharacter_eventTakeDamage_Parms, DamageAmount), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::NewProp_DamageAmount,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::Function_MetaDataParams[] = {
+		{ "Category", "CustomEventDamage" },
+		{ "Comment", "//Take damage function\n" },
+		{ "ModuleRelativePath", "Public/MainCharacter.h" },
+		{ "ToolTip", "Take damage function" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMainCharacter, nullptr, "TakeDamage", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::MainCharacter_eventTakeDamage_Parms), Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMainCharacter_TakeDamage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMainCharacter_TakeDamage_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -160,6 +204,7 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMainCharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMainCharacter_SetRespawnLocation, "SetRespawnLocation" }, // 3948360475
+		{ &Z_Construct_UFunction_AMainCharacter_TakeDamage, "TakeDamage" }, // 2038884541
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::Class_MetaDataParams[] = {
@@ -348,9 +393,9 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 3667234231U) },
+		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 2100180581U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_4089245833(TEXT("/Script/FPS_GAME"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_711491891(TEXT("/Script/FPS_GAME"),
 		Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_natal_Documents_University_Advanced_Game_Engine_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
