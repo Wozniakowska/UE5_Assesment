@@ -36,7 +36,7 @@ void ALava::BeginPlay()
 //            if (Player)
 //            {
 //                Player->StartDamage();
-//                GetWorldTimerManager().SetTimer(DamageTimerHandle, this, &ALava::DamagePlayer, 1.0f, true);
+//                GetWorldTimerManager().SetTimer(DamageTimerHandle, this, &ALava::TakeDamage, 1.0f, true);
 //            }
 //        }
 //    }
@@ -46,5 +46,5 @@ void ALava::BeginPlay()
 void ALava::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+  
 }

@@ -24,7 +24,7 @@ protected:
 	//void OverlapBegin(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 	//// Timer handle for applying damage repeatedly
 	//FTimerHandle DamageTimerHandle;
-	float InitCollisionRadius;
+	//float InitCollisionRadius;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
