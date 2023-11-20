@@ -2,11 +2,6 @@
   Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" FPS_GAMEEditor Win64 Development -Project="C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\FPS_GAME.uproject" -WaitMutex -FromMsBuild
   Log file: C:\Users\natal\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment).
-  Invalidating makefile for FPS_GAMEEditor (working set of source files changed)
-  Parsing headers for FPS_GAMEEditor
-    Running Internal UnrealHeaderTool "C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\FPS_GAME.uproject" "C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\FPS_GAMEEditor\Development\FPS_GAMEEditor.uhtmanifest" -WarningsAsErrors -installed
-  Total of 2 written
-  Reflection code generated for FPS_GAMEEditor in 1.2342288 seconds
   Building FPS_GAMEEditor...
   Using Visual Studio 2022 14.37.32825 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   [Upgrade]
@@ -15,17 +10,15 @@
   [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_2;' in FPS_GAMEEditor.Target.cs.
   [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
   [Upgrade]
-  [Adaptive Build] Excluded from FPS_GAME unity file: MainCharacter.cpp, MoveablePlatform.cpp
+  [Adaptive Build] Excluded from FPS_GAME unity file: MoveablePlatformVertical.cpp
   Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
     Executing up to 8 processes, one per physical core
-  Building 6 actions with 6 processes...
-  [1/6] Compile [x64] FPS_GAME.init.gen.cpp
-  [2/6] Compile [x64] MoveablePlatform.cpp
-  [3/6] Compile [x64] MoveablePlatform.gen.cpp
-  [4/6] Link [x64] UnrealEditor-FPS_GAME-0087.lib
-     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0087.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0087.exp
-  [5/6] Link [x64] UnrealEditor-FPS_GAME-0087.dll
-     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0087.suppressed.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0087.suppressed.exp
-  [6/6] WriteMetadata FPS_GAMEEditor.target
-  Total time in Parallel executor: 1.91 seconds
-  Total execution time: 5.74 seconds
+  Building 4 actions with 4 processes...
+  [1/4] Compile [x64] MoveablePlatformVertical.cpp
+  [2/4] Link [x64] UnrealEditor-FPS_GAME-0090.lib
+     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0090.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0090.exp
+  [3/4] Link [x64] UnrealEditor-FPS_GAME-0090.dll
+     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0090.suppressed.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0090.suppressed.exp
+  [4/4] WriteMetadata FPS_GAMEEditor.target
+  Total time in Parallel executor: 1.93 seconds
+  Total execution time: 3.01 seconds
