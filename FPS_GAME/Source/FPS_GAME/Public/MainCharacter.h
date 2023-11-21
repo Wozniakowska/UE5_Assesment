@@ -48,6 +48,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
 	FTimerHandle CountdownTimerHandle;
 
+	bool bIsCrouching;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -78,6 +80,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
 		class UInputAction* HealAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
+	class UInputAction* CrouchAction;
+
 	bool bIsJumping;
 	float JumpHeight;
 
@@ -92,6 +97,9 @@ public:
 	void Look(const FInputActionValue& Value);
 
 	void Jumping();
+
+	void CrouchStart();
+	void CrouchStop();
 
 	void CountdownTimer();
 

@@ -26,6 +26,7 @@ AMainCharacter::AMainCharacter()
 	RespawnDelay = 0.01f;
 	/*SpawnLocation = FVector(0.0f, 0.0f, 0.0f);*/
 	isDead = false;
+	bIsCrouching = false;
 }
 
 // Called when the game starts or when spawned
@@ -93,6 +94,11 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 		EnhancedInputComponent->BindAction(DamageAction, ETriggerEvent::Triggered, this, &AMainCharacter::StartDamage);
 
 		EnhancedInputComponent->BindAction(HealAction, ETriggerEvent::Triggered, this, &AMainCharacter::StartHealing);
+
+		EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Triggered, this, &AMainCharacter::CrouchStart);
+
+		EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Completed, this, &AMainCharacter::CrouchStop);
+
 	}
 }
 
@@ -136,6 +142,25 @@ void AMainCharacter::Jumping()
 {
 	Jump();
 	bIsJumping = true;
+}
+
+void AMainCharacter::CrouchStart()
+{
+	if (!bIsCrouching)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Crouching"));
+		bIsCrouching = true;
+		Crouch();
+	}
+}
+
+void AMainCharacter::CrouchStop()
+{
+	if (bIsCrouching)
+	{
+		bIsCrouching = false;
+		UnCrouch();
+	}
 }
 
 void AMainCharacter::CountdownTimer()
@@ -197,6 +222,7 @@ void AMainCharacter::Respawn()
 	SetActorLocation(SpawnLocation);
 	isDead = false;
 	PlayerHealth = 1.0f;
+	
 }
 
 void AMainCharacter::Die()

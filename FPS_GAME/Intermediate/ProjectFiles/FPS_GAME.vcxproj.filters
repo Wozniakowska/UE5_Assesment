@@ -79,6 +79,9 @@
     <ClCompile Include="..\..\Source\FPS_GAME\Private\MoveablePlatformVertical.cpp">
       <Filter>Source\FPS_GAME\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS_GAME\Private\SwingingBall.cpp">
+      <Filter>Source\FPS_GAME\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS_GAME\Private\Timer.cpp">
       <Filter>Source\FPS_GAME\Private</Filter>
     </ClCompile>
@@ -101,6 +104,9 @@
       <Filter>Source\FPS_GAME\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\FPS_GAME\Public\MoveablePlatformVertical.h">
+      <Filter>Source\FPS_GAME\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPS_GAME\Public\SwingingBall.h">
       <Filter>Source\FPS_GAME\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\FPS_GAME\Public\Timer.h">
