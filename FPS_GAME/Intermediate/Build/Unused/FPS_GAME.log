@@ -2,7 +2,11 @@
   Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" FPS_GAMEEditor Win64 Development -Project="C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\FPS_GAME.uproject" -WaitMutex -FromMsBuild
   Log file: C:\Users\natal\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment).
-  Invalidating makefile for FPS_GAMEEditor (MainCharacter.cpp.obj.response modified)
+  Invalidating makefile for FPS_GAMEEditor (working set of source files changed)
+  Parsing headers for FPS_GAMEEditor
+    Running Internal UnrealHeaderTool "C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\FPS_GAME.uproject" "C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\FPS_GAMEEditor\Development\FPS_GAMEEditor.uhtmanifest" -WarningsAsErrors -installed
+  Total of 2 written
+  Reflection code generated for FPS_GAMEEditor in 1.2724639 seconds
   Building FPS_GAMEEditor...
   Using Visual Studio 2022 14.37.32825 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   [Upgrade]
@@ -11,19 +15,17 @@
   [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_2;' in FPS_GAMEEditor.Target.cs.
   [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
   [Upgrade]
-  [Adaptive Build] Excluded from FPS_GAME unity file: MainCharacter.cpp, SwingingBall.cpp
+  [Adaptive Build] Excluded from FPS_GAME unity file: DissapearingPlatform.cpp
   Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
     Executing up to 8 processes, one per physical core
-  Building 4 actions with 4 processes...
-  [1/4] Compile [x64] MainCharacter.cpp
-C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(91): warning C4263: 'void AMainCharacter::TakeDamage(float)': member function does not override any base class virtual member function
-C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(118): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
-  C:\Program Files\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\Pawn.h(278): note: see declaration of 'APawn::TakeDamage'
-  C:\Program Files\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\PlayerController.h(40): note: see declaration of 'APawn'
-  [2/4] Link [x64] UnrealEditor-FPS_GAME-0110.lib
-     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0110.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0110.exp
-  [3/4] Link [x64] UnrealEditor-FPS_GAME-0110.dll
-     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0110.suppressed.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0110.suppressed.exp
-  [4/4] WriteMetadata FPS_GAMEEditor.target
-  Total time in Parallel executor: 3.66 seconds
-  Total execution time: 6.06 seconds
+  Building 6 actions with 6 processes...
+  [1/6] Compile [x64] FPS_GAME.init.gen.cpp
+  [2/6] Compile [x64] DissapearingPlatform.gen.cpp
+  [3/6] Compile [x64] DissapearingPlatform.cpp
+  [4/6] Link [x64] UnrealEditor-FPS_GAME-0142.lib
+     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0142.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0142.exp
+  [5/6] Link [x64] UnrealEditor-FPS_GAME-0142.dll
+     Creating library C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0142.suppressed.lib and object C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0142.suppressed.exp
+  [6/6] WriteMetadata FPS_GAMEEditor.target
+  Total time in Parallel executor: 1.93 seconds
+  Total execution time: 5.49 seconds

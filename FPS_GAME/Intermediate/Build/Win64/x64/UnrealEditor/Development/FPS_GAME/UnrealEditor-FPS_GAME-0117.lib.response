@@ -1,0 +1,33 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-FPS_GAME-0117.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\FPS_GAMEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\Checkpoint.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\CheckPoints.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\DissapearingPlatform.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\FPS_GAME.init.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\FPS_GAMEGameModeBase.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\Lava.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\MainCharacter.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\MoveablePlatform.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\MoveablePlatformVertical.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\SwingingBall.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\Timer.gen.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\FPS_GAME.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\FPS_GAMEGameModeBase.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\Checkpoint.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\CheckPoints.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\Lava.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\MainCharacter.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\MoveablePlatform.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\MoveablePlatformVertical.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\SwingingBall.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\Timer.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\DissapearingPlatform.cpp.obj"
+"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\Default.rc2.res"
+/OUT:"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0117.lib"
