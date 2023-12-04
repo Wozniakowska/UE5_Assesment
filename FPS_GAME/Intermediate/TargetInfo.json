@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "FPS_GAME",
-			"Path": "C:\\Users\\natal\\Documents\\University\\Advanced Game Engine\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAME.Target.cs",
+			"Path": "G:\\Projects\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAME.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "FPS_GAMEEditor",
-			"Path": "C:\\Users\\natal\\Documents\\University\\Advanced Game Engine\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAMEEditor.Target.cs",
+			"Path": "G:\\Projects\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAMEEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

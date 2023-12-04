@@ -30,7 +30,9 @@ protected:
 	FTimerHandle RespawnTimeHandle;
 	void Respawn();
 	void Die();
+	 
 
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 		float PlayerHealth;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn")
@@ -115,4 +117,12 @@ public:
 	//Take damage function
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 	bool isDead;
+
+	
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor);
+
+	UFUNCTION()
+	float GetSeconds();
+
 };

@@ -189,6 +189,16 @@ void AMainCharacter::SetRespawnLocation(const FVector& NewRespawnLocation)
 	SpawnLocation = NewRespawnLocation;
 }
 
+void AMainCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor)
+{
+	//UE_LOG(LogTemp, Warning, TEXT("OtherActor %i"), OtherActor.ActorGuid.A);
+}
+
+float AMainCharacter::GetSeconds()
+{
+	return Seconds;
+}
+
 void AMainCharacter::TakeDamage(float DamageAmount)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Damage taken"), DamageAmount);

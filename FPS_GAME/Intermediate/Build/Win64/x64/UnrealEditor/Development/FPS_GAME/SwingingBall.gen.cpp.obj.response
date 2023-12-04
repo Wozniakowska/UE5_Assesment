@@ -1,6 +1,6 @@
-"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\UnrealEditor\Inc\FPS_GAME\UHT\SwingingBall.gen.cpp"
+G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\UnrealEditor\Inc\FPS_GAME\UHT\SwingingBall.gen.cpp
 /I .
-/I "C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Private"
+/I G:\Projects\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Private
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT
 /I ..\Shaders\Shared
 /I Runtime\Engine\Classes
@@ -273,9 +273,9 @@
 /I Runtime\MovieSceneCapture\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController\UHT
 /I Developer\AnimationDataController\Public
-/I "C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\UnrealEditor\Inc\FPS_GAME\UHT"
-/I "C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Source"
-/I "C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public"
+/I G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\UnrealEditor\Inc\FPS_GAME\UHT
+/I G:\Projects\UE5_Assesment\FPS_GAME\Source
+/I G:\Projects\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public
 /I ..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT
 /I ..\Plugins\EnhancedInput\Source\EnhancedInput\Public
 /I ..\Plugins\EnhancedInput\Source
@@ -288,12 +288,12 @@
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\FPS_GAMEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
-/FI"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\Definitions.FPS_GAME.h"
-/Yu"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\FPS_GAMEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
-/Fp"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\FPS_GAMEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
-/Fo"C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\SwingingBall.gen.cpp.obj"
-/sourceDependencies "C:\Users\natal\Documents\University\Advanced Game Engine\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\SwingingBall.gen.cpp.dep.json"
+/FI"G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\FPS_GAMEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
+/FI"G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\Definitions.FPS_GAME.h"
+/Yu"G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\FPS_GAMEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
+/Fp"G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\FPS_GAMEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
+/Fo"G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\SwingingBall.gen.cpp.obj"
+/sourceDependencies G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\SwingingBall.gen.cpp.dep.json
 /Zc:inline
 /nologo
 /Oi

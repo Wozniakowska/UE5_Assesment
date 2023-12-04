@@ -67,6 +67,9 @@
     <ClCompile Include="..\..\Source\FPS_GAME\Private\CheckPoints.cpp">
       <Filter>Source\FPS_GAME\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS_GAME\Private\CollectibleSpin.cpp">
+      <Filter>Source\FPS_GAME\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS_GAME\Private\DissapearingPlatform.cpp">
       <Filter>Source\FPS_GAME\Private</Filter>
     </ClCompile>
@@ -95,6 +98,9 @@
       <Filter>Source\FPS_GAME\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\FPS_GAME\Public\CheckPoints.h">
+      <Filter>Source\FPS_GAME\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPS_GAME\Public\CollectibleSpin.h">
       <Filter>Source\FPS_GAME\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\FPS_GAME\Public\DissapearingPlatform.h">

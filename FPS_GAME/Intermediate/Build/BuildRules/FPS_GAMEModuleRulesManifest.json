@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\natal\\Documents\\University\\Advanced Game Engine\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAME\\FPS_GAME.Build.cs",
-		"C:\\Users\\natal\\Documents\\University\\Advanced Game Engine\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAME.Target.cs",
-		"C:\\Users\\natal\\Documents\\University\\Advanced Game Engine\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAMEEditor.Target.cs"
+		"G:\\Projects\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAME\\FPS_GAME.Build.cs",
+		"G:\\Projects\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAME.Target.cs",
+		"G:\\Projects\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAMEEditor.Target.cs"
 	],
 	"EngineVersion": "5.2.1"
 }
