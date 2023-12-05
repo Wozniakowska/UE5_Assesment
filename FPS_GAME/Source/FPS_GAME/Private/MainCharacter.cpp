@@ -22,7 +22,7 @@ AMainCharacter::AMainCharacter()
 	check(FPSMeshArms != nullptr);
 	FPSMeshArms->SetupAttachment(FPSCamera);
 	JumpHeight = 600.0f;
-	PlayerHealth = 1.00f;
+	PlayerHealth = 10.00f;
 	RespawnDelay = 0.01f;
 	/*SpawnLocation = FVector(0.0f, 0.0f, 0.0f);*/
 	isDead = false;

@@ -41,11 +41,11 @@ protected:
 		float RespawnDelay;
 	/*************************************************************/
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
+	/*UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
 	float Seconds = 59.0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
-	int32 Minutes = 2.0;
+	int32 Minutes = 2.0;*/
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
 	FTimerHandle CountdownTimerHandle;
@@ -55,6 +55,11 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
+	float Seconds = 59.0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
+	int32 Minutes = 2.0;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

@@ -242,6 +242,10 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_RespawnDelay;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CountdownTimerHandle_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_CountdownTimerHandle;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Seconds_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_Seconds;
@@ -249,10 +253,6 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Minutes_MetaData[];
 #endif
 		static const UECodeGen_Private::FIntPropertyParams NewProp_Minutes;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_CountdownTimerHandle_MetaData[];
-#endif
-		static const UECodeGen_Private::FStructPropertyParams NewProp_CountdownTimerHandle;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DefaultMappingContext_MetaData[];
 #endif
@@ -337,27 +337,28 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_RespawnDelay = { "RespawnDelay", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AMainCharacter, RespawnDelay), METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_RespawnDelay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_RespawnDelay_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::NewProp_CountdownTimerHandle_MetaData[] = {
+		{ "Category", "CountdownTimer" },
+		{ "Comment", "/*UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = \"CountdownTimer\")\n\x09""float Seconds = 59.0;\n\n\x09UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = \"CountdownTimer\")\n\x09int32 Minutes = 2.0;*/" },
+		{ "ModuleRelativePath", "Public/MainCharacter.h" },
+		{ "ToolTip", "UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = \"CountdownTimer\")\n       float Seconds = 59.0;\n\n       UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = \"CountdownTimer\")\n       int32 Minutes = 2.0;" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_CountdownTimerHandle = { "CountdownTimerHandle", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AMainCharacter, CountdownTimerHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_CountdownTimerHandle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_CountdownTimerHandle_MetaData)) }; // 3633724737
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::NewProp_Seconds_MetaData[] = {
 		{ "Category", "CountdownTimer" },
-		{ "Comment", "/*************************************************************/" },
 		{ "ModuleRelativePath", "Public/MainCharacter.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_Seconds = { "Seconds", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AMainCharacter, Seconds), METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_Seconds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_Seconds_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_Seconds = { "Seconds", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AMainCharacter, Seconds), METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_Seconds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_Seconds_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::NewProp_Minutes_MetaData[] = {
 		{ "Category", "CountdownTimer" },
 		{ "ModuleRelativePath", "Public/MainCharacter.h" },
 	};
 #endif
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_Minutes = { "Minutes", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AMainCharacter, Minutes), METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_Minutes_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_Minutes_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::NewProp_CountdownTimerHandle_MetaData[] = {
-		{ "Category", "CountdownTimer" },
-		{ "ModuleRelativePath", "Public/MainCharacter.h" },
-	};
-#endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_CountdownTimerHandle = { "CountdownTimerHandle", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AMainCharacter, CountdownTimerHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_CountdownTimerHandle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_CountdownTimerHandle_MetaData)) }; // 3633724737
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_Minutes = { "Minutes", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AMainCharacter, Minutes), METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_Minutes_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_Minutes_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::NewProp_DefaultMappingContext_MetaData[] = {
 		{ "Category", "Input" },
@@ -454,9 +455,9 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_PlayerHealth,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_SpawnLocation,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_RespawnDelay,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_CountdownTimerHandle,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_Seconds,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_Minutes,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_CountdownTimerHandle,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_DefaultMappingContext,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_JumpAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_MoveAction,
@@ -505,9 +506,9 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 3141673537U) },
+		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 2350047215U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_1665691069(TEXT("/Script/FPS_GAME"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_3098761720(TEXT("/Script/FPS_GAME"),
 		Z_CompiledInDeferFile_FID_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
