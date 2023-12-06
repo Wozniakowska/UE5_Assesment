@@ -16,12 +16,12 @@ AMainCharacter::AMainCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 	FPSCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FPSCamera->SetupAttachment(CastChecked<USceneComponent, UCapsuleComponent>(GetCapsuleComponent()));
-	FPSCamera->SetRelativeLocation(FVector(0.0f, 0.0f, 60.0f + BaseEyeHeight));
+	FPSCamera->SetRelativeLocation(FVector(0.0f, 0.0f, BaseEyeHeight - 60.0f));
 	FPSCamera->bUsePawnControlRotation = true;
 	FPSMeshArms = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonMeshArms"));
 	check(FPSMeshArms != nullptr);
 	FPSMeshArms->SetupAttachment(FPSCamera);
-	JumpHeight = 600.0f;
+	JumpHeight = 60.0f;
 	PlayerHealth = 10.00f;
 	RespawnDelay = 0.01f;
 	/*SpawnLocation = FVector(0.0f, 0.0f, 0.0f);*/
@@ -99,6 +99,7 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 		EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Completed, this, &AMainCharacter::CrouchStop);
 
+		EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Triggered, this, &AMainCharacter::Shoot);
 	}
 }
 
@@ -240,4 +241,38 @@ void AMainCharacter::Die()
 	isDead = true;
 	UE_LOG(LogTemp, Warning, TEXT(" Died!"));
 	GetWorld()->GetTimerManager().SetTimer(RespawnTimeHandle, this, &AMainCharacter::Respawn, RespawnDelay, false);
+}
+
+void AMainCharacter::Shoot()
+{	
+	if (ProjectileClass)
+	{
+		FVector CameraLocation;
+		FRotator CameraRotation;
+		GetActorEyesViewPoint(CameraLocation, CameraRotation);
+
+		MuzzleOffset.Set(100.0f, 0.0f, 0.0f);
+
+		FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
+
+		FRotator MuzzleRotation = CameraRotation;
+		//MuzzleRotation.Pitch += 10.0f;
+
+		UWorld* World = GetWorld();
+		if (World)
+		{
+			FActorSpawnParameters SpawnParams;
+			SpawnParams.Owner = this;
+			SpawnParams.Instigator = GetInstigator();
+
+			AProjectile* ProjectileObj = World->SpawnActor<AProjectile>(ProjectileClass, MuzzleLocation, MuzzleRotation, SpawnParams);
+			if (ProjectileObj)
+			{
+				// Set the projectile's initial trajectory.
+				FVector LaunchDirection = MuzzleRotation.Vector();
+				ProjectileObj->FireInDirection(LaunchDirection);
+			}
+		}
+	}
+
 }

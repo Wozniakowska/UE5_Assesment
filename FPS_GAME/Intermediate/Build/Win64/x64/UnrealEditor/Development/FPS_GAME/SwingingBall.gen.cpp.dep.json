@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "g:\\projects\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\swingingball.gen.cpp",
+        "Source": "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\swingingball.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "g:\\projects\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\fps_gameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "PCH": "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\fps_gameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
-            "g:\\projects\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fps_game\\definitions.fps_game.h",
-            "g:\\projects\\ue5_assesment\\fps_game\\source\\fps_game\\public\\swingingball.h",
-            "g:\\projects\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\swingingball.generated.h"
+            "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fps_game\\definitions.fps_game.h",
+            "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\source\\fps_game\\public\\swingingball.h",
+            "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\swingingball.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

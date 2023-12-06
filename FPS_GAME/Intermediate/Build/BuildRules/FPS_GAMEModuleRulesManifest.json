@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"G:\\Projects\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAME\\FPS_GAME.Build.cs",
-		"G:\\Projects\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAME.Target.cs",
-		"G:\\Projects\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAMEEditor.Target.cs"
+		"F:\\_Work\\University\\Year 3\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAME\\FPS_GAME.Build.cs",
+		"F:\\_Work\\University\\Year 3\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAME.Target.cs",
+		"F:\\_Work\\University\\Year 3\\UE5_Assesment\\FPS_GAME\\Source\\FPS_GAMEEditor.Target.cs"
 	],
 	"EngineVersion": "5.2.1"
 }

@@ -9,6 +9,7 @@
 #include "InputActionValue.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "Projectile.h"
 #include "MainCharacter.generated.h"
 
 UCLASS()
@@ -61,7 +62,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
 	int32 Minutes = 2.0;
 
-	// Called to bind functionality to input
+	/***************Input****************/
+
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
@@ -88,7 +90,11 @@ public:
 		class UInputAction* HealAction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
-	class UInputAction* CrouchAction;
+		class UInputAction* CrouchAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
+		class UInputAction* ShootAction;
+
 
 	bool bIsJumping;
 	float JumpHeight;
@@ -130,4 +136,10 @@ public:
 	UFUNCTION()
 	float GetSeconds();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay") FVector MuzzleOffset;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Projectile") TSubclassOf<class AProjectile> ProjectileClass;
+
+
+	void Shoot();
 };
