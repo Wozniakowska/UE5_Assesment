@@ -40,6 +40,8 @@ public:
 	UPROPERTY(VisibleDefaultsOnly, Category = "Movement") UMaterialInstanceDynamic* ProjectileMaterialInstance;
 
 	UPROPERTY(VisibleAnywhere, Category = "Projectile") UNiagaraComponent* BulletNiagaraComponent;
+
+	UPROPERTY(VisibleDefaultsOnly, Category = "Projectile") UNiagaraSystem* Test;
 	
 	void FireInDirection(const FVector& ShootDirection);
 

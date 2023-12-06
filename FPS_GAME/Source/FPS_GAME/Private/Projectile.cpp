@@ -57,8 +57,13 @@ AProjectile::AProjectile()
 
 	if (!BulletNiagaraComponent)
 	{
+		Test = LoadObject<UNiagaraSystem>(nullptr, TEXT("'/Game/Models/Weapon/BulletTrail.BulletTrail'"));
 		BulletNiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("BulletNiagaraComponent"));
+		BulletNiagaraComponent->SetAsset(Test);
+		BulletNiagaraComponent->Niagara
 	}
+
+	/*UNiagaraComponent* NiagaraComp = UNiagaraFunctionLibrary::SpawnSystemAttached(Test, )*/
 }
 
 // Called when the game starts or when spawned

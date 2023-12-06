@@ -12,34 +12,12 @@
   [Upgrade]
   Determining max actions to execute in parallel (6 physical cores, 12 logical cores)
     Executing up to 6 processes, one per physical core
-  Building 10 actions with 6 processes...
-  [1/10] Compile [x64] FPS_GAME.init.gen.cpp
-  [2/10] Compile [x64] Projectile.cpp
-  [3/10] Compile [x64] Projectile.gen.cpp
-  [4/10] Compile [x64] Lava.cpp
-F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(104): warning C4263: 'void AMainCharacter::TakeDamage(float)': member function does not override any base class virtual member function
-F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(145): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
-  F:\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\Pawn.h(278): note: see declaration of 'APawn::TakeDamage'
-  F:\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\PlayerController.h(40): note: see declaration of 'APawn'
-  [5/10] Compile [x64] MainCharacter.gen.cpp
-F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(104): warning C4263: 'void AMainCharacter::TakeDamage(float)': member function does not override any base class virtual member function
-F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(145): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
-  F:\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\Pawn.h(278): note: see declaration of 'APawn::TakeDamage'
-  F:\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\PlayerController.h(40): note: see declaration of 'APawn'
-  [6/10] Compile [x64] MainCharacter.cpp
-F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(104): warning C4263: 'void AMainCharacter::TakeDamage(float)': member function does not override any base class virtual member function
-F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(145): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
-  F:\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\Pawn.h(278): note: see declaration of 'APawn::TakeDamage'
-  F:\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\PlayerController.h(40): note: see declaration of 'APawn'
-  [7/10] Compile [x64] CheckPoints.cpp
-F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(104): warning C4263: 'void AMainCharacter::TakeDamage(float)': member function does not override any base class virtual member function
-F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(145): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
-  F:\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\Pawn.h(278): note: see declaration of 'APawn::TakeDamage'
-  F:\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\PlayerController.h(40): note: see declaration of 'APawn'
-  [8/10] Link [x64] UnrealEditor-FPS_GAME-0186.lib
-     Creating library F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0186.lib and object F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0186.exp
-  [9/10] Link [x64] UnrealEditor-FPS_GAME-0186.dll
-     Creating library F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0186.suppressed.lib and object F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0186.suppressed.exp
-  [10/10] WriteMetadata FPS_GAMEEditor.target
-  Total time in Parallel executor: 8.17 seconds
-  Total execution time: 9.15 seconds
+  Building 4 actions with 4 processes...
+  [1/4] Compile [x64] Projectile.cpp
+  [2/4] Link [x64] UnrealEditor-FPS_GAME-0188.lib
+     Creating library F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0188.lib and object F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0188.exp
+  [3/4] Link [x64] UnrealEditor-FPS_GAME-0188.dll
+     Creating library F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0188.suppressed.lib and object F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0188.suppressed.exp
+  [4/4] WriteMetadata FPS_GAMEEditor.target
+  Total time in Parallel executor: 5.60 seconds
+  Total execution time: 6.54 seconds
