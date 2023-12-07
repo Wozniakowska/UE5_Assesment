@@ -5,6 +5,12 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/Users/anjum/Documents/GitHub/UE5_Assesment/FPS_GAME/Content/Levels/MainMenu.umap",
+				"C:/Users/anjum/Documents/GitHub/UE5_Assesment/FPS_GAME/Content/Widgets_UI/WB_MainMenu.uasset",
+				"C:/Users/anjum/Documents/GitHub/UE5_Assesment/FPS_GAME/Content/Audio/button-pressed-38129.uasset",
+				"C:/Users/anjum/Documents/GitHub/UE5_Assesment/FPS_GAME/Content/Widgets_UI/WB_GameOver.uasset",
+				"C:/Users/anjum/Documents/GitHub/UE5_Assesment/FPS_GAME/Content/Audio/button-pressed-38129_Cue.uasset",
+				"C:/Users/anjum/Documents/GitHub/UE5_Assesment/FPS_GAME/Content/Audio/labyrinth-of-despair-166594.uasset",
 				"F:/_Work/University/Year 3/UE5_Assesment/FPS_GAME/Content/Levels/L_Fps.umap",
 				"F:/_Work/University/Year 3/UE5_Assesment/FPS_GAME/Content/Models/Platforms/SM_Platform_1.uasset",
 				"F:/_Work/University/Year 3/UE5_Assesment/FPS_GAME/Content/Blueprints/BP_StaticPlatform.uasset",
