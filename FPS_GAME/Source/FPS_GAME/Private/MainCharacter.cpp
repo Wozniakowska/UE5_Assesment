@@ -27,6 +27,18 @@ AMainCharacter::AMainCharacter()
 	/*SpawnLocation = FVector(0.0f, 0.0f, 0.0f);*/
 	isDead = false;
 	bIsCrouching = false;
+
+	if (!GunMeshComponent)
+	{
+		GunMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GunMeshComponent"));
+		static ConstructorHelpers::FObjectFinder<UStaticMesh>GunMesh(TEXT("'/Game/Models/Weapon/uploads_files_4092110_Sci-fi+Gun.uploads_files_4092110_Sci-fi+Gun'"));
+		if (GunMesh.Succeeded())
+		{
+			GunMeshComponent->SetStaticMesh(GunMesh.Object);
+		}
+		GunMeshComponent->SetRelativeScale3D(FVector(0.5f, 0.5f, 0.5f));
+		GunMeshComponent->SetupAttachment(FPSMeshArms);
+	}
 }
 
 // Called when the game starts or when spawned
@@ -251,7 +263,7 @@ void AMainCharacter::Shoot()
 		FRotator CameraRotation;
 		GetActorEyesViewPoint(CameraLocation, CameraRotation);
 
-		MuzzleOffset.Set(100.0f, 0.0f, 0.0f);
+		MuzzleOffset.Set(40.0f, 0.0f, -20.0f);
 
 		FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
 
@@ -274,5 +286,4 @@ void AMainCharacter::Shoot()
 			}
 		}
 	}
-
 }

@@ -136,10 +136,15 @@ public:
 	UFUNCTION()
 	float GetSeconds();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay") FVector MuzzleOffset;
+	// ** SHOOTING ** \\
 
-	UPROPERTY(EditDefaultsOnly, Category = "Projectile") TSubclassOf<class AProjectile> ProjectileClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gunplay") FVector MuzzleOffset;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Gunplay") TSubclassOf<class AProjectile> ProjectileClass;
 
 	void Shoot();
+
+	UPROPERTY(VisibleAnywhere, Category = "Gunplay") int AmmoCount;
+
+	UPROPERTY(VisibleDefaultsOnly, Category = "Gunplay") UStaticMeshComponent* GunMeshComponent;
 };

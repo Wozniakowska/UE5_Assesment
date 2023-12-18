@@ -21,7 +21,7 @@ AProjectile::AProjectile()
 		CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
 		CollisionComponent->BodyInstance.SetCollisionProfileName(TEXT("Projectile"));
 		CollisionComponent->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
-		CollisionComponent->InitSphereRadius(50.0f);
+		CollisionComponent->InitSphereRadius(10.0f);
 		RootComponent = CollisionComponent;
 	}
 
@@ -29,8 +29,8 @@ AProjectile::AProjectile()
 	{
 		ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
 		ProjectileMovementComponent->SetUpdatedComponent(CollisionComponent);
-		ProjectileMovementComponent->InitialSpeed = 10.0f;
-		ProjectileMovementComponent->MaxSpeed = 10.0f;
+		ProjectileMovementComponent->InitialSpeed = 1000.0f;
+		ProjectileMovementComponent->MaxSpeed = 1000.0f;
 		ProjectileMovementComponent->bRotationFollowsVelocity = true;
 		ProjectileMovementComponent->bShouldBounce = true;
 		ProjectileMovementComponent->Bounciness = 0.3f;
@@ -51,7 +51,7 @@ AProjectile::AProjectile()
 			ProjectileMaterialInstance = UMaterialInstanceDynamic::Create(Material.Object, ProjectileMeshComponent);
 		}
 		ProjectileMeshComponent->SetMaterial(0, ProjectileMaterialInstance);
-		ProjectileMeshComponent->SetRelativeScale3D(FVector(0.05f, 0.05f, 0.05f));
+		ProjectileMeshComponent->SetRelativeScale3D(FVector(0.015f, 0.015f, 0.015f));
 		ProjectileMeshComponent->SetupAttachment(RootComponent);		
 	}
 
@@ -60,10 +60,8 @@ AProjectile::AProjectile()
 		Test = LoadObject<UNiagaraSystem>(nullptr, TEXT("'/Game/Models/Weapon/BulletTrail.BulletTrail'"));
 		BulletNiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("BulletNiagaraComponent"));
 		BulletNiagaraComponent->SetAsset(Test);
-		BulletNiagaraComponent->Niagara
+		BulletNiagaraComponent->SetupAttachment(RootComponent);
 	}
-
-	/*UNiagaraComponent* NiagaraComp = UNiagaraFunctionLibrary::SpawnSystemAttached(Test, )*/
 }
 
 // Called when the game starts or when spawned
@@ -89,7 +87,6 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, U
 		UE_LOG(LogTemp, Warning, TEXT("APPLE %s"), *OtherActor->GetActorNameOrLabel());
 		Destroy();
 	}
-
 }
 
 void AProjectile::FireInDirection(const FVector& ShootDirection)
