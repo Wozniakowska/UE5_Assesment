@@ -263,12 +263,13 @@ void AMainCharacter::Shoot()
 		FRotator CameraRotation;
 		GetActorEyesViewPoint(CameraLocation, CameraRotation);
 
-		MuzzleOffset.Set(40.0f, 0.0f, -20.0f);
+		//MuzzleOffset.Set(40.0f, 0.0f, -20.0f);
+		MuzzleOffset.Set(130.0f, GunMeshComponent->GetRelativeLocation().Y - 15.0f, -30.0f);
 
 		FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
 
 		FRotator MuzzleRotation = CameraRotation;
-		//MuzzleRotation.Pitch += 10.0f;
+		//MuzzleRotation.Roll -= 40.0f;
 
 		UWorld* World = GetWorld();
 		if (World)
