@@ -94,6 +94,9 @@
     <ClCompile Include="..\..\Source\FPS_GAME\Private\Timer.cpp">
       <Filter>Source\FPS_GAME\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS_GAME\Private\WoodenCrate.cpp">
+      <Filter>Source\FPS_GAME\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\FPS_GAME\Public">
       <UniqueIdentifier>{ABD77FA7-D1E9-3361-B80C-9735654B9652}</UniqueIdentifier>
     </Filter>
@@ -128,6 +131,9 @@
       <Filter>Source\FPS_GAME\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\FPS_GAME\Public\Timer.h">
+      <Filter>Source\FPS_GAME\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPS_GAME\Public\WoodenCrate.h">
       <Filter>Source\FPS_GAME\Public</Filter>
     </ClInclude>
   </ItemGroup>
