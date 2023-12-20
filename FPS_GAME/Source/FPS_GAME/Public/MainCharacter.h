@@ -147,4 +147,18 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = "Gunplay") int AmmoCount;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Gunplay") UStaticMeshComponent* GunMeshComponent;
+
+	UPROPERTY(VisibleAnywhere, Category = "Gunplay") bool bCanShoot;
+
+	UPROPERTY(VisibleAnywhere, Category = "Gunplay") bool bShootCounting;
+
+	UPROPERTY(VisibleAnywhere, Category = "Gunplay") FTimerHandle ShootTimer;
+
+	void ChangeCanShoot();
+
+	UPROPERTY(VisibleAnywhere, Category = "Gunplay") FTimerHandle AmmoTimer;
+
+	UPROPERTY(VisibleAnywhere, Category = "Gunplay") bool bAmmoCounting;
+
+	void IncreaseAmmoCount();
 };

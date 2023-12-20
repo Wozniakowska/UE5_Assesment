@@ -1,4 +1,3 @@
-
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MainCharacter.h"
@@ -39,6 +38,11 @@ AMainCharacter::AMainCharacter()
 		GunMeshComponent->SetRelativeScale3D(FVector(0.5f, 0.5f, 0.5f));
 		GunMeshComponent->SetupAttachment(FPSMeshArms);
 	}
+
+	bCanShoot = true;
+	bShootCounting = false;
+	AmmoCount = 10;
+	bAmmoCounting = false;
 }
 
 // Called when the game starts or when spawned
@@ -84,6 +88,19 @@ void AMainCharacter::Tick(float DeltaTime)
 	{
 		PlayerHealth = 0.00f;
 		Die();
+	}
+
+	//GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, FString::FromInt(AmmoCount));
+
+	if (AmmoCount < 10 && !bAmmoCounting)
+	{
+		bAmmoCounting = true;
+		GetWorld()->GetTimerManager().SetTimer(AmmoTimer, this, &AMainCharacter::IncreaseAmmoCount, 3, true);
+	}
+	else if (AmmoCount >= 10)
+	{
+		bAmmoCounting = false;
+		AmmoCount = 10;
 	}
 }
 
@@ -256,35 +273,60 @@ void AMainCharacter::Die()
 }
 
 void AMainCharacter::Shoot()
-{	
-	if (ProjectileClass)
+{
+	if (bCanShoot && AmmoCount >= 1)
 	{
-		FVector CameraLocation;
-		FRotator CameraRotation;
-		GetActorEyesViewPoint(CameraLocation, CameraRotation);
-
-		//MuzzleOffset.Set(40.0f, 0.0f, -20.0f);
-		MuzzleOffset.Set(130.0f, GunMeshComponent->GetRelativeLocation().Y - 15.0f, -30.0f);
-
-		FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
-
-		FRotator MuzzleRotation = CameraRotation;
-		//MuzzleRotation.Roll -= 40.0f;
-
-		UWorld* World = GetWorld();
-		if (World)
+		if (ProjectileClass)
 		{
-			FActorSpawnParameters SpawnParams;
-			SpawnParams.Owner = this;
-			SpawnParams.Instigator = GetInstigator();
+			FVector CameraLocation;
+			FRotator CameraRotation;
+			GetActorEyesViewPoint(CameraLocation, CameraRotation);
 
-			AProjectile* ProjectileObj = World->SpawnActor<AProjectile>(ProjectileClass, MuzzleLocation, MuzzleRotation, SpawnParams);
-			if (ProjectileObj)
+			//MuzzleOffset.Set(40.0f, 0.0f, -20.0f);
+			MuzzleOffset.Set(130.0f, GunMeshComponent->GetRelativeLocation().Y - 15.0f, -30.0f);
+
+			FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
+
+			FRotator MuzzleRotation = CameraRotation;
+			//MuzzleRotation.Roll -= 40.0f;ti
+
+			UWorld* World = GetWorld();
+			if (World)
 			{
-				// Set the projectile's initial trajectory.
-				FVector LaunchDirection = MuzzleRotation.Vector();
-				ProjectileObj->FireInDirection(LaunchDirection);
+				FActorSpawnParameters SpawnParams;
+				SpawnParams.Owner = this;
+				SpawnParams.Instigator = GetInstigator();
+
+				AProjectile* ProjectileObj = World->SpawnActor<AProjectile>(ProjectileClass, MuzzleLocation, MuzzleRotation, SpawnParams);
+				if (ProjectileObj)
+				{
+					// Set the projectile's initial trajectory.
+					FVector LaunchDirection = MuzzleRotation.Vector();
+					ProjectileObj->FireInDirection(LaunchDirection);
+					bCanShoot = false;
+					bShootCounting = true;
+					AmmoCount--;
+					GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, FString::FromInt(AmmoCount));
+				}
 			}
 		}
 	}
+
+	if (bShootCounting)
+	{
+		bShootCounting = false;
+		GetWorld()->GetTimerManager().SetTimer(RespawnTimeHandle, this, &AMainCharacter::ChangeCanShoot, 0.5f, true);
+	}
+}
+
+void AMainCharacter::ChangeCanShoot()
+{	
+	bCanShoot = true;
+}
+
+void AMainCharacter::IncreaseAmmoCount()
+{
+	AmmoCount++;
+	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, "AMMO: " + FString::FromInt(AmmoCount));
+	bAmmoCounting = false;
 }
