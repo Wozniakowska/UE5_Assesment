@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Components/BoxComponent.h"
+#include "NiagaraComponent.h"
+#include "NiagaraFunctionLibrary.h"
 #include "WoodenCrate.generated.h"
 
 UCLASS()
@@ -28,9 +30,9 @@ public:
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Shootable") UStaticMeshComponent* BoxMeshComponent;
 
-	void WhenShot();
+	void WhenShot(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
-	TArray<FVector> PositionArray;
+	UPROPERTY(VisibleAnywhere, Category = "Projectile") UNiagaraComponent* BoxNiagaraComponent;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Gunplay") TSubclassOf<class AWoodenCrate> WoodenCrateClass;
+	UPROPERTY(VisibleDefaultsOnly, Category = "Projectile") UNiagaraSystem* BoxDestroy;
 };

@@ -90,8 +90,6 @@ void AMainCharacter::Tick(float DeltaTime)
 		Die();
 	}
 
-	//GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, FString::FromInt(AmmoCount));
-
 	if (AmmoCount < 10 && !bAmmoCounting)
 	{
 		bAmmoCounting = true;

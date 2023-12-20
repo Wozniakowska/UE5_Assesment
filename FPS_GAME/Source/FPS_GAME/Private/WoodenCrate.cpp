@@ -14,11 +14,6 @@ AWoodenCrate::AWoodenCrate()
 		RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("BoxSceneComponent"));
 	}
 
-	/*if (!BoxCollisionComponent)
-	{
-
-	}*/
-
 	if (!BoxMeshComponent)
 	{
 		BoxMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BoxMeshComponent"));
@@ -27,31 +22,36 @@ AWoodenCrate::AWoodenCrate()
 		{
 			BoxMeshComponent->SetStaticMesh(BoxMesh.Object);
 		}
-	}	
+		BoxMeshComponent->SetRelativeScale3D(FVector(0.5f, 0.5f, 0.5f));
+		BoxMeshComponent->OnComponentHit.AddDynamic(this, &AWoodenCrate::WhenShot);
+		BoxMeshComponent->SetupAttachment(RootComponent);
+	}
+
+	if (!BoxNiagaraComponent)
+	{
+		BoxDestroy = LoadObject<UNiagaraSystem>(nullptr, TEXT("'/Game/Models/Weapon/ShotCrate.ShotCrate'"));
+		BoxNiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("BoxNiagaraComponent"));
+		BoxNiagaraComponent->SetupAttachment(RootComponent);
+	}
 }
 
 // Called when the game starts or when spawned
 void AWoodenCrate::BeginPlay()
 {
 	Super::BeginPlay();
-
-	UWorld* ThisWorld = GetWorld();
-	PositionArray.Add(FVector(4435.706604, 803.699899, 578.028089));
-	FRotator rotation(0, 0, 0);
-	FActorSpawnParameters SpawnParams;
-	SpawnParams.Owner = this;
-	SpawnParams.Instigator = GetInstigator();
-	AWoodenCrate* WoodenCrateObj = ThisWorld->SpawnActor<AWoodenCrate>(WoodenCrateClass, PositionArray[0], rotation, SpawnParams);
-	if (WoodenCrateObj)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, TEXT("ShouldBeSpawned"));
-	}	
 }
 
 // Called every frame
 void AWoodenCrate::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
+void AWoodenCrate::WhenShot(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if (OtherActor != this)
+	{
+		//BoxNiagaraComponent->SetAsset(BoxDestroy);
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, "Shot");
+	}	
+}

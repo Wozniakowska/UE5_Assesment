@@ -57,9 +57,9 @@ AProjectile::AProjectile()
 
 	if (!BulletNiagaraComponent)
 	{
-		Test = LoadObject<UNiagaraSystem>(nullptr, TEXT("'/Game/Models/Weapon/BulletTrail.BulletTrail'"));
+		BulletTrail = LoadObject<UNiagaraSystem>(nullptr, TEXT("'/Game/Models/Weapon/BulletTrail.BulletTrail'"));
 		BulletNiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("BulletNiagaraComponent"));
-		BulletNiagaraComponent->SetAsset(Test);
+		BulletNiagaraComponent->SetAsset(BulletTrail);
 		BulletNiagaraComponent->SetupAttachment(RootComponent);
 	}
 }
@@ -67,8 +67,7 @@ AProjectile::AProjectile()
 // Called when the game starts or when spawned
 void AProjectile::BeginPlay()
 {
-	Super::BeginPlay();
-	
+	Super::BeginPlay();	
 }
 
 // Called every frame
@@ -80,13 +79,12 @@ void AProjectile::Tick(float DeltaTime)
 
 void AProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (OtherActor != this && OtherComponent->IsSimulatingPhysics())
+	if (OtherActor != this && OtherActor->ActorHasTag("CanBeDestroyed"))
 	{
-		OtherComponent->AddImpulseAtLocation(ProjectileMovementComponent->Velocity * 100.0f, Hit.ImpactPoint);
-
-		UE_LOG(LogTemp, Warning, TEXT("APPLE %s"), *OtherActor->GetActorNameOrLabel());
+		//BulletNiagaraComponent->SetAsset(BoxDestroy);
+		//OtherActor->Destroy();		
 		Destroy();
-	}
+	}	
 }
 
 void AProjectile::FireInDirection(const FVector& ShootDirection)

@@ -8,6 +8,7 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "NiagaraComponent.h"
 #include "NiagaraFunctionLibrary.h"
+#include "WoodenCrate.h"
 #include "Projectile.generated.h"
 
 //class UNiagaraSystem;
@@ -41,8 +42,7 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = "Projectile") UNiagaraComponent* BulletNiagaraComponent;
 
-	UPROPERTY(VisibleDefaultsOnly, Category = "Projectile") UNiagaraSystem* Test;
+	UPROPERTY(VisibleDefaultsOnly, Category = "Projectile") UNiagaraSystem* BulletTrail;	
 	
 	void FireInDirection(const FVector& ShootDirection);
-
 };
