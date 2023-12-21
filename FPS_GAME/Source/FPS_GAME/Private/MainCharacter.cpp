@@ -27,6 +27,7 @@ AMainCharacter::AMainCharacter()
 	isDead = false;
 	bIsCrouching = false;
 
+	// Set the mesh component for the gun
 	if (!GunMeshComponent)
 	{		GunMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GunMeshComponent"));
 		static ConstructorHelpers::FObjectFinder<UStaticMesh>GunMesh(TEXT("'/Game/Models/Weapon/uploads_files_4092110_Sci-fi+Gun.uploads_files_4092110_Sci-fi+Gun'"));
@@ -37,7 +38,7 @@ AMainCharacter::AMainCharacter()
 		GunMeshComponent->SetRelativeScale3D(FVector(0.5f, 0.5f, 0.5f));
 		GunMeshComponent->SetupAttachment(FPSMeshArms);
 	}
-
+	//Set the variables used for the gun and charging (reloading)
 	bCanShoot = true;
 	bShootCounting = false;
 	AmmoCount = 10;
@@ -89,14 +90,16 @@ void AMainCharacter::Tick(float DeltaTime)
 		Die();
 	}
 
+	// If current ammo is less than 10, slowly refresh ammo at 3 seconds per shot
 	if (AmmoCount < 10 && !bAmmoCounting)
 	{
 		bAmmoCounting = true;
-		GetWorld()->GetTimerManager().SetTimer(AmmoTimer, this, &AMainCharacter::IncreaseAmmoCount, 3, true);
+		GetWorld()->GetTimerManager().SetTimer(AmmoTimer, this, &AMainCharacter::IncreaseAmmoCount, 3, false);
 	}
+	// Cap ammo count at 10
 	else if (AmmoCount >= 10)
 	{
-		bAmmoCounting = false;
+		
 		AmmoCount = 10;
 	}
 }
@@ -282,8 +285,7 @@ void AMainCharacter::Respawn()
 	// Set is Dead to false
 	isDead = false;
 	//Resent the health
-	PlayerHealth = 1.0f;
-	
+	PlayerHealth = 1.0f;	
 }
 
 void AMainCharacter::Die()
@@ -295,24 +297,24 @@ void AMainCharacter::Die()
 	GetWorld()->GetTimerManager().SetTimer(RespawnTimeHandle, this, &AMainCharacter::Respawn, RespawnDelay, false);
 }
 
+// Shoot function which will spawn the projectile as the specified position and launch it in the given direction.
 void AMainCharacter::Shoot()
 {
+	// If the player has the ammo, proceed
 	if (bCanShoot && AmmoCount >= 1)
 	{
+		// If a reference to the projectile class exists, proceed
 		if (ProjectileClass)
 		{
+			// References for the position where the shot will exit the gun, set to be the barrel of the gun
 			FVector CameraLocation;
 			FRotator CameraRotation;
 			GetActorEyesViewPoint(CameraLocation, CameraRotation);
-
-			//MuzzleOffset.Set(40.0f, 0.0f, -20.0f);
-			MuzzleOffset.Set(130.0f, GunMeshComponent->GetRelativeLocation().Y - 15.0f, -30.0f);
-
+			MuzzleOffset.Set(174.865484, 5.751367, -19.211193);
 			FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
-
 			FRotator MuzzleRotation = CameraRotation;
-			//MuzzleRotation.Roll -= 40.0f;ti
 
+			// Get a reference to the world, and if found spawn the projectile and launch it and reduce the ammo count
 			UWorld* World = GetWorld();
 			if (World)
 			{
@@ -323,18 +325,18 @@ void AMainCharacter::Shoot()
 				AProjectile* ProjectileObj = World->SpawnActor<AProjectile>(ProjectileClass, MuzzleLocation, MuzzleRotation, SpawnParams);
 				if (ProjectileObj)
 				{
-					// Set the projectile's initial trajectory.
 					FVector LaunchDirection = MuzzleRotation.Vector();
 					ProjectileObj->FireInDirection(LaunchDirection);
 					bCanShoot = false;
 					bShootCounting = true;
 					AmmoCount--;
-					GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, FString::FromInt(AmmoCount));
+					//GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, FString::FromInt(AmmoCount));
 				}
 			}
 		}
 	}
 
+	// Used to reload the gun / charge up
 	if (bShootCounting)
 	{
 		bShootCounting = false;
@@ -342,14 +344,16 @@ void AMainCharacter::Shoot()
 	}
 }
 
+// Function used in a timer to allow the player to shoot again, working as a delay between shots to simulate rate of fire
 void AMainCharacter::ChangeCanShoot()
 {	
 	bCanShoot = true;
 }
 
+// Function used in a timer to increase the player's ammo over time (recharging the gun's ammo)
 void AMainCharacter::IncreaseAmmoCount()
 {
 	AmmoCount++;
-	GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, "AMMO: " + FString::FromInt(AmmoCount));
+	//GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, "AMMO: " + FString::FromInt(AmmoCount));
 	bAmmoCounting = false;
 }

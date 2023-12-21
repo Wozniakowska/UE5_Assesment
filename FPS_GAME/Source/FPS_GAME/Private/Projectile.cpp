@@ -11,11 +11,13 @@ AProjectile::AProjectile()
 
 	InitialLifeSpan = 3.0f;
 
+	// Setup the root component of the class
 	if (!RootComponent)
 	{
 		RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("ProjectileSceneComponent"));
 	}
 
+	// Setup the collision for the projectile
 	if (!CollisionComponent)
 	{
 		CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
@@ -25,18 +27,20 @@ AProjectile::AProjectile()
 		RootComponent = CollisionComponent;
 	}
 
+	// Setup the movement data for the projectile
 	if (!ProjectileMovementComponent)
 	{
 		ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
 		ProjectileMovementComponent->SetUpdatedComponent(CollisionComponent);
-		ProjectileMovementComponent->InitialSpeed = 1000.0f;
-		ProjectileMovementComponent->MaxSpeed = 1000.0f;
+		ProjectileMovementComponent->InitialSpeed = 5000.0f;
+		ProjectileMovementComponent->MaxSpeed = 5000.0f;
 		ProjectileMovementComponent->bRotationFollowsVelocity = true;
 		ProjectileMovementComponent->bShouldBounce = true;
 		ProjectileMovementComponent->Bounciness = 0.3f;
 		ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
 	}
 
+	// Set the mesh and material of the projectile
 	if (!ProjectileMeshComponent)
 	{
 		ProjectileMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMeshComponent"));
@@ -55,6 +59,7 @@ AProjectile::AProjectile()
 		ProjectileMeshComponent->SetupAttachment(RootComponent);		
 	}
 
+	// Setup the particle system used to give the projectile a beam effect
 	if (!BulletNiagaraComponent)
 	{
 		BulletTrail = LoadObject<UNiagaraSystem>(nullptr, TEXT("'/Game/Models/Weapon/BulletTrail.BulletTrail'"));
@@ -77,16 +82,17 @@ void AProjectile::Tick(float DeltaTime)
 
 }
 
+// Logic for what happens when the projectile hits something
 void AProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
 	if (OtherActor != this && OtherActor->ActorHasTag("CanBeDestroyed"))
 	{
-		//BulletNiagaraComponent->SetAsset(BoxDestroy);
-		//OtherActor->Destroy();		
-		Destroy();
-	}	
+		OtherActor->Destroy();
+	}
+	Destroy();
 }
 
+// Function used in the AMainCharacter class for providing velcity to the projectile
 void AProjectile::FireInDirection(const FVector& ShootDirection)
 {
 	ProjectileMovementComponent->Velocity = ShootDirection * ProjectileMovementComponent->InitialSpeed;

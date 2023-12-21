@@ -138,12 +138,11 @@ public:
 	float GetSeconds();
 
 	// ** SHOOTING ** \\
+	// These are all the functions and variables related to the gunplay
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gunplay") FVector MuzzleOffset;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Gunplay") TSubclassOf<class AProjectile> ProjectileClass;
-
-	void Shoot();
+	UPROPERTY(EditDefaultsOnly, Category = "Gunplay") TSubclassOf<class AProjectile> ProjectileClass;	
 
 	UPROPERTY(VisibleAnywhere, Category = "Gunplay") int AmmoCount;
 
@@ -155,11 +154,13 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = "Gunplay") FTimerHandle ShootTimer;
 
-	void ChangeCanShoot();
-
 	UPROPERTY(VisibleAnywhere, Category = "Gunplay") FTimerHandle AmmoTimer;
 
 	UPROPERTY(VisibleAnywhere, Category = "Gunplay") bool bAmmoCounting;
+
+	void Shoot();
+
+	void ChangeCanShoot();
 
 	void IncreaseAmmoCount();
 };

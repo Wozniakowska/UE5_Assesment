@@ -1,17 +1,17 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\natal\\documents\\university\\advanced game engine\\ue5_assesment\\fps_game\\source\\fps_game\\fps_gamegamemodebase.cpp",
+        "Source": "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\source\\fps_game\\fps_gamegamemodebase.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\natal\\documents\\university\\advanced game engine\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\fps_gameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "PCH": "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\fps_gameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
-            "c:\\users\\natal\\documents\\university\\advanced game engine\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fps_game\\definitions.fps_game.h",
-            "c:\\users\\natal\\documents\\university\\advanced game engine\\ue5_assesment\\fps_game\\source\\fps_game\\fps_gamegamemodebase.h",
-            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
-            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
-            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
-            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
-            "c:\\users\\natal\\documents\\university\\advanced game engine\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\fps_gamegamemodebase.generated.h"
+            "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fps_game\\definitions.fps_game.h",
+            "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\source\\fps_game\\fps_gamegamemodebase.h",
+            "f:\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "f:\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "f:\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "f:\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\fps_gamegamemodebase.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

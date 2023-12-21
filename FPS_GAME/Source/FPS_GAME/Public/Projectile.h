@@ -11,8 +11,6 @@
 #include "WoodenCrate.h"
 #include "Projectile.generated.h"
 
-//class UNiagaraSystem;
-
 UCLASS()
 class FPS_GAME_API AProjectile : public AActor
 {
@@ -30,7 +28,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION() void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
+	// All the variables and function used for the projectile class	
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Projectile") USphereComponent* CollisionComponent;
 
@@ -44,5 +42,7 @@ public:
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Projectile") UNiagaraSystem* BulletTrail;	
 	
+	UFUNCTION() void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
+
 	void FireInDirection(const FVector& ShootDirection);
 };

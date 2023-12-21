@@ -11,7 +11,7 @@ ACheckPoints::ACheckPoints()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	TriggerCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("TriggerBox"));
-	TriggerCollision->SetBoxExtent(FVector(50.f, 50.f, 50.f)); 
+	TriggerCollision->SetBoxExtent(FVector(50.f, 50.f, 50.f));
 	RootComponent = TriggerCollision;
 }
 

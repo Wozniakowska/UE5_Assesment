@@ -3,17 +3,19 @@
 
 #include "WoodenCrate.h"
 
-// Sets default values
+// Constructor for the class, setting the default values
 AWoodenCrate::AWoodenCrate()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	// Set root component
 	if (!RootComponent)
 	{
 		RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("BoxSceneComponent"));
 	}
 
+	// Find and set the mesh for the WoodenCrate
 	if (!BoxMeshComponent)
 	{
 		BoxMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BoxMeshComponent"));
@@ -23,16 +25,8 @@ AWoodenCrate::AWoodenCrate()
 			BoxMeshComponent->SetStaticMesh(BoxMesh.Object);
 		}
 		BoxMeshComponent->SetRelativeScale3D(FVector(0.5f, 0.5f, 0.5f));
-		BoxMeshComponent->OnComponentHit.AddDynamic(this, &AWoodenCrate::WhenShot);
 		BoxMeshComponent->SetupAttachment(RootComponent);
-	}
-
-	if (!BoxNiagaraComponent)
-	{
-		BoxDestroy = LoadObject<UNiagaraSystem>(nullptr, TEXT("'/Game/Models/Weapon/ShotCrate.ShotCrate'"));
-		BoxNiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("BoxNiagaraComponent"));
-		BoxNiagaraComponent->SetupAttachment(RootComponent);
-	}
+	}	
 }
 
 // Called when the game starts or when spawned
@@ -45,13 +39,4 @@ void AWoodenCrate::BeginPlay()
 void AWoodenCrate::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-}
-
-void AWoodenCrate::WhenShot(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
-{
-	if (OtherActor != this)
-	{
-		//BoxNiagaraComponent->SetAsset(BoxDestroy);
-		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, "Shot");
-	}	
 }

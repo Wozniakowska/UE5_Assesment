@@ -26,13 +26,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// The variables for the wooden crate
+
 	UPROPERTY(VisibleDefaultsOnly, Category = "Shootable") UBoxComponent* BoxCollisionComponent;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Shootable") UStaticMeshComponent* BoxMeshComponent;
-
-	void WhenShot(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
-
-	UPROPERTY(VisibleAnywhere, Category = "Projectile") UNiagaraComponent* BoxNiagaraComponent;
-
-	UPROPERTY(VisibleDefaultsOnly, Category = "Projectile") UNiagaraSystem* BoxDestroy;
 };
