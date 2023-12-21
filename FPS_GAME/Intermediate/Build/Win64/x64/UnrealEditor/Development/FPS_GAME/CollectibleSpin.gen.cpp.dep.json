@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\collectiblespin.gen.cpp",
+        "Source": "c:\\users\\natal\\documents\\university\\advanced game engine\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\collectiblespin.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\fps_gameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "PCH": "c:\\users\\natal\\documents\\university\\advanced game engine\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\fps_gameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
-            "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fps_game\\definitions.fps_game.h",
-            "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\source\\fps_game\\public\\collectiblespin.h",
-            "f:\\_work\\university\\year 3\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\collectiblespin.generated.h"
+            "c:\\users\\natal\\documents\\university\\advanced game engine\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fps_game\\definitions.fps_game.h",
+            "c:\\users\\natal\\documents\\university\\advanced game engine\\ue5_assesment\\fps_game\\source\\fps_game\\public\\collectiblespin.h",
+            "c:\\users\\natal\\documents\\university\\advanced game engine\\ue5_assesment\\fps_game\\intermediate\\build\\win64\\unrealeditor\\inc\\fps_game\\uht\\collectiblespin.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

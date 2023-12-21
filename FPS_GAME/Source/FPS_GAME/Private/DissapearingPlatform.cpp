@@ -58,6 +58,7 @@ void ADissapearingPlatform::RespawnPlatformBack()
 
 void ADissapearingPlatform::SetCollisionEnabled(bool bEnableCollision)
 {
+    //Set collicion for the platform
     if (BoxCollisionComponent)
     {
         BoxCollisionComponent->SetCollisionEnabled(bEnableCollision ? ECollisionEnabled::QueryAndPhysics : ECollisionEnabled::NoCollision);

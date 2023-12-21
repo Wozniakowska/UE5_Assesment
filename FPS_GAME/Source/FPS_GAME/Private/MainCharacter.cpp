@@ -20,16 +20,15 @@ AMainCharacter::AMainCharacter()
 	FPSMeshArms = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonMeshArms"));
 	check(FPSMeshArms != nullptr);
 	FPSMeshArms->SetupAttachment(FPSCamera);
-	JumpHeight = 60.0f;
-	PlayerHealth = 10.00f;
+	JumpHeight = 110.0f;
+	PlayerHealth = 1.0f;
 	RespawnDelay = 0.01f;
 	/*SpawnLocation = FVector(0.0f, 0.0f, 0.0f);*/
 	isDead = false;
 	bIsCrouching = false;
 
 	if (!GunMeshComponent)
-	{
-		GunMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GunMeshComponent"));
+	{		GunMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GunMeshComponent"));
 		static ConstructorHelpers::FObjectFinder<UStaticMesh>GunMesh(TEXT("'/Game/Models/Weapon/uploads_files_4092110_Sci-fi+Gun.uploads_files_4092110_Sci-fi+Gun'"));
 		if (GunMesh.Succeeded())
 		{
@@ -118,14 +117,19 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 		//Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMainCharacter::Look);
 
+		//Damage
 		EnhancedInputComponent->BindAction(DamageAction, ETriggerEvent::Triggered, this, &AMainCharacter::StartDamage);
 
+		//StartHeal
 		EnhancedInputComponent->BindAction(HealAction, ETriggerEvent::Triggered, this, &AMainCharacter::StartHealing);
 
+		//Start Crouch
 		EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Triggered, this, &AMainCharacter::CrouchStart);
 
+		//Stop Crouch
 		EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Completed, this, &AMainCharacter::CrouchStop);
 
+		//Shoot
 		EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Triggered, this, &AMainCharacter::Shoot);
 	}
 }
@@ -169,11 +173,13 @@ void AMainCharacter::Look(const FInputActionValue& Value)
 void AMainCharacter::Jumping()
 {
 	Jump();
+	//Set bisJumpming to true
 	bIsJumping = true;
 }
 
 void AMainCharacter::CrouchStart()
 {
+	//if the character is detecting crouch set it to true and crouch
 	if (!bIsCrouching)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Crouching"));
@@ -182,6 +188,7 @@ void AMainCharacter::CrouchStart()
 	}
 }
 
+//if the player no longer presses the button stop crouching
 void AMainCharacter::CrouchStop()
 {
 	if (bIsCrouching)
@@ -194,19 +201,26 @@ void AMainCharacter::CrouchStop()
 void AMainCharacter::CountdownTimer()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Countdown Timer"));
+	//Check for remaining seconds
 	if (Seconds > 0)
 	{
+		// count down seconds
 		--Seconds;
 		UE_LOG(LogTemp, Warning, TEXT("Seconds %f"), Seconds);
 	}
 	else
 	{
+		//Count down minutes
 		--Minutes;
+		//Resent seconds
 		Seconds = 59.0f;
 		UE_LOG(LogTemp, Warning, TEXT("Seconds %f"), Minutes);
+		//Check if there are no more minutes remainig
 		if (Minutes <= 0)
 		{
+			//Stop the timer
 			GetWorldTimerManager().ClearTimer(CountdownTimerHandle);
+			//Reset seconds
 			Seconds = 0.0f;
 		}
 	}
@@ -214,6 +228,7 @@ void AMainCharacter::CountdownTimer()
 
 void AMainCharacter::SetRespawnLocation(const FVector& NewRespawnLocation)
 {
+	//Assign new respawn locaion
 	SpawnLocation = NewRespawnLocation;
 }
 
@@ -230,19 +245,23 @@ float AMainCharacter::GetSeconds()
 void AMainCharacter::TakeDamage(float DamageAmount)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Damage taken"), DamageAmount);
+	//Decrease players health 
 	PlayerHealth -= DamageAmount;
 	
 }
 
 void AMainCharacter::StartDamage()
 {
+	//Take damage by 0.2
 	TakeDamage(0.2f);
 }
 
 void AMainCharacter::Heal(float HealAmount)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Player Healing..."), HealAmount);
+	//Increase health
 	PlayerHealth += HealAmount;
+	// check to make sure players health doesnt excees the max value
 	if (PlayerHealth >= 1.00f)
 	{
 		PlayerHealth = 1.00f;
@@ -251,22 +270,28 @@ void AMainCharacter::Heal(float HealAmount)
 
 void AMainCharacter::StartHealing()
 {
+	//Heal by 0.2
 	Heal(0.2f);
 }
 
 void AMainCharacter::Respawn()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Spawning..."));
+	// Respawn at the spawn location
 	SetActorLocation(SpawnLocation);
+	// Set is Dead to false
 	isDead = false;
+	//Resent the health
 	PlayerHealth = 1.0f;
 	
 }
 
 void AMainCharacter::Die()
 {
+	// is dead true
 	isDead = true;
 	UE_LOG(LogTemp, Warning, TEXT(" Died!"));
+	// Set a timer to call rspawn function after the delay
 	GetWorld()->GetTimerManager().SetTimer(RespawnTimeHandle, this, &AMainCharacter::Respawn, RespawnDelay, false);
 }
 

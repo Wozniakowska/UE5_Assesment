@@ -9,8 +9,9 @@ ASwingingBall::ASwingingBall()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	//Speed
 	SwingingSpeed = 3.0f;
+	//Moving distance
 	SwingingDistance = 50.0f;
 }
 
@@ -18,6 +19,7 @@ ASwingingBall::ASwingingBall()
 void ASwingingBall::BeginPlay()
 {
 	Super::BeginPlay();
+	//Being location of the movement
 	CurrentLocation = GetActorLocation();
 }
 
@@ -25,12 +27,15 @@ void ASwingingBall::BeginPlay()
 void ASwingingBall::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	
 	SwingBall(DeltaTime);
 }
 
 void ASwingingBall::SwingBall(float DeltaTime)
 {
 	//FVector NewBallLocation = CurrentLocation + FVector(SwingingDistance * FMath::Sin(SwingingSpeed * GetGameTimeSinceCreation()), 0.0f, 0.0f);
+	// New location for the ball based on motion
 	FVector NewBallLocation = CurrentLocation + FVector(SwingingDistance * FMath::Sin(SwingingSpeed * GetGameTimeSinceCreation()),0.0f, 0.0f);
+	//Set new location  which is calculated based on the position
 	SetActorLocation(NewBallLocation);
 }

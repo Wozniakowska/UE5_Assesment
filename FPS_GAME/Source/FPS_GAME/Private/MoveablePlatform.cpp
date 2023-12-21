@@ -33,6 +33,7 @@ void AMoveablePlatform::Tick(float DeltaTime)
 
 void AMoveablePlatform::MovePlatform(float DeltaTime)
 {
+    //Get current location of the platform
     FVector NewMoveLocation = GetActorLocation();
     if (isMoving)
     {

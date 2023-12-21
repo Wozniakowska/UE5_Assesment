@@ -29,6 +29,7 @@ protected:
 	void Heal(float HealAmount);
 	void StartHealing();
 	FTimerHandle RespawnTimeHandle;
+	UFUNCTION(BlueprintCallable, Category = "Respawn")
 	void Respawn();
 	void Die();
 	 
