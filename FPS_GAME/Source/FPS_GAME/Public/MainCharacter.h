@@ -63,6 +63,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CountdownTimer")
 	int32 Minutes = 2.0;
 
+	
 	/***************Input****************/
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
@@ -144,7 +145,7 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Gunplay") TSubclassOf<class AProjectile> ProjectileClass;	
 
-	UPROPERTY(VisibleAnywhere, Category = "Gunplay") int AmmoCount;
+	UPROPERTY(VisibleAnywhere,BluePrintReadWrite, Category = "Gunplay") int AmmoCount;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Gunplay") UStaticMeshComponent* GunMeshComponent;
 

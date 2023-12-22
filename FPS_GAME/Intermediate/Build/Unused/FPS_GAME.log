@@ -1,8 +1,26 @@
 ﻿  Using bundled DotNet SDK version: 6.0.302
-  Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" FPS_GAMEEditor Win64 Development -Project="F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\FPS_GAME.uproject" -WaitMutex -FromMsBuild
-  Log file: C:\Users\mcgam\AppData\Local\UnrealBuildTool\Log.txt
-  Using 'git status' to determine working set for adaptive non-unity build (F:\_Work\University\Year 3\UE5_Assesment).
-  Invalidating makefile for FPS_GAMEEditor (MainCharacter.cpp.obj.response modified)
+  Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" FPS_GAMEEditor Win64 Development -Project="G:\Projects\UE5_Assesment\FPS_GAME\FPS_GAME.uproject" -WaitMutex -FromMsBuild
+  Log file: C:\Users\anjum\AppData\Local\UnrealBuildTool\Log.txt
+  Using 'git status' to determine working set for adaptive non-unity build (G:\Projects\UE5_Assesment).
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-0148.dll
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-0148.pdb
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-0150.dll
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-0150.pdb
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-0151.dll
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-0152.dll
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-0152.pdb
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-0154.dll
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-0154.pdb
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-1530.dll
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-1530.pdb
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-6615.dll
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Binaries\Win64\UnrealEditor-FPS_GAME-6615.pdb
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0148.lib
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0150.lib
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0152.lib
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0154.lib
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-1530.lib
+  Deleted hot-reload file: G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-6615.lib
   Building FPS_GAMEEditor...
   Using Visual Studio 2022 14.37.32824 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   [Upgrade]
@@ -13,17 +31,13 @@
   [Upgrade]
   Determining max actions to execute in parallel (6 physical cores, 12 logical cores)
     Executing up to 6 processes, one per physical core
-  Building 5 actions with 5 processes...
-  [1/5] Compile [x64] Projectile.cpp
-  [2/5] Compile [x64] MainCharacter.cpp
-F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(105): warning C4263: 'void AMainCharacter::TakeDamage(float)': member function does not override any base class virtual member function
-F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Source\FPS_GAME\Public\MainCharacter.h(166): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
-  F:\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\Pawn.h(278): note: see declaration of 'APawn::TakeDamage'
-  F:\Epic Games\UE_5.2\Engine\Source\Runtime\Engine\Classes\GameFramework\PlayerController.h(40): note: see declaration of 'APawn'
-  [3/5] Link [x64] UnrealEditor-FPS_GAME-0147.lib
-     Creating library F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0147.lib and object F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0147.exp
-  [4/5] Link [x64] UnrealEditor-FPS_GAME-0147.dll
-     Creating library F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0147.suppressed.lib and object F:\_Work\University\Year 3\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME-0147.suppressed.exp
-  [5/5] WriteMetadata FPS_GAMEEditor.target
-  Total time in Parallel executor: 6.50 seconds
-  Total execution time: 8.39 seconds
+    Requested 1.5 GB free memory per action, 5.25 GB available: limiting max parallel actions to 3
+  Building 4 actions with 3 processes...
+  [1/4] Compile [x64] Projectile.cpp
+  [2/4] Link [x64] UnrealEditor-FPS_GAME.lib
+     Creating library G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME.lib and object G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME.exp
+  [3/4] Link [x64] UnrealEditor-FPS_GAME.dll
+     Creating library G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME.suppressed.lib and object G:\Projects\UE5_Assesment\FPS_GAME\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPS_GAME\UnrealEditor-FPS_GAME.suppressed.exp
+  [4/4] WriteMetadata FPS_GAMEEditor.target
+  Total time in Parallel executor: 11.16 seconds
+  Total execution time: 13.09 seconds

@@ -87,7 +87,7 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, U
 {
 	if (OtherActor != this && OtherActor->ActorHasTag("CanBeDestroyed"))
 	{
-		OtherActor->Destroy();
+		OtherActor->Destroy();			
 	}
 	Destroy();
 }

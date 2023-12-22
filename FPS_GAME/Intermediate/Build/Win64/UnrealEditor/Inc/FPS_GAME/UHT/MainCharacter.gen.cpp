@@ -558,7 +558,7 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		{ "ModuleRelativePath", "Public/MainCharacter.h" },
 	};
 #endif
-	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_AmmoCount = { "AmmoCount", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AMainCharacter, AmmoCount), METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_AmmoCount_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_AmmoCount_MetaData)) };
+	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_AmmoCount = { "AmmoCount", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AMainCharacter, AmmoCount), METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_AmmoCount_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_AmmoCount_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::NewProp_GunMeshComponent_MetaData[] = {
 		{ "Category", "Gunplay" },
@@ -674,15 +674,15 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AMainCharacter);
 	AMainCharacter::~AMainCharacter() {}
-	struct Z_CompiledInDeferFile_FID__Work_University_Year_3_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics
+	struct Z_CompiledInDeferFile_FID_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID__Work_University_Year_3_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 337094607U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 3561652074U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID__Work_University_Year_3_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_3801232293(TEXT("/Script/FPS_GAME"),
-		Z_CompiledInDeferFile_FID__Work_University_Year_3_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID__Work_University_Year_3_UE5_Assesment_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_157673127(TEXT("/Script/FPS_GAME"),
+		Z_CompiledInDeferFile_FID_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_FPS_GAME_Source_FPS_GAME_Public_MainCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

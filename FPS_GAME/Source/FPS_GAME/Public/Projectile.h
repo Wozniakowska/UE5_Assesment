@@ -9,7 +9,9 @@
 #include "NiagaraComponent.h"
 #include "NiagaraFunctionLibrary.h"
 #include "WoodenCrate.h"
+#include "Components/ActorComponent.h"
 #include "Projectile.generated.h"
+
 
 UCLASS()
 class FPS_GAME_API AProjectile : public AActor
@@ -42,7 +44,9 @@ public:
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Projectile") UNiagaraSystem* BulletTrail;	
 	
+
 	UFUNCTION() void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
 	void FireInDirection(const FVector& ShootDirection);
+	
 };
